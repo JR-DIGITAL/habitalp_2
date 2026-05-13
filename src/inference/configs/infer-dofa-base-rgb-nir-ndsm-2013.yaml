@@ -1,0 +1,25 @@
+# Inference config: DOFA base RGB+NIR+nDSM Phase E — 2013 data
+model_type: dofa
+
+input_data:
+  rgb: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/orthophoto_gis_stmk/flug_2013_2015_rgb.tif"
+  cir: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/orthophoto_gis_stmk/falschfarben_2013_2015.tif"
+  ndsm: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/elevation_gis_stmk_2010-2012/ndsm.tif"
+
+mask_path: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/mask/classes_v4_2013.tif"
+roi_path: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/roi/habitalp_2013_boundary.gpkg"
+
+models:
+  dofa:
+    checkpoint: "/home/hkristen/habitalp2/models/dofa-base-ndsm-phaseE/dofa-base-ndsm-phaseE-epoch=125-step=64512-val/mIoU=0.3083.ckpt"
+
+inference:
+  patch_size: 256
+  res: 0.5
+  overlap: 64
+  delta: 8
+  batch_size: 4
+  n_classes: 23
+
+output:
+  dir: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/model_output/dofa-base-rgb-nir-ndsm-phaseE"
