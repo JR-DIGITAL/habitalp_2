@@ -18,12 +18,12 @@ run() {
     echo "====== Done: ${experiment} (${year}) ======"
 }
 
-run infer-clay-v1.5-rgb-phaseG-2013.yaml   clay-v1.5-rgb-phaseG   2013
-run infer-clay-v1.5-rgb-phaseG-2020.yaml   clay-v1.5-rgb-phaseG   2020
-run infer-dofa-base-rgb-phaseG-2013.yaml   dofa-base-rgb-phaseG   2013
-run infer-dofa-base-rgb-phaseG-2020.yaml   dofa-base-rgb-phaseG   2020
-run infer-terramind-rgb-phaseG-2013.yaml   terramind-rgb-phaseG   2013
-run infer-terramind-rgb-phaseG-2020.yaml   terramind-rgb-phaseG   2020
+run infer-clay-v1.5-rgb-2013.yaml   clay-v1.5-rgb   2013
+run infer-clay-v1.5-rgb-2020.yaml   clay-v1.5-rgb   2020
+run infer-dofa-base-rgb-2013.yaml   dofa-base-rgb   2013
+run infer-dofa-base-rgb-2020.yaml   dofa-base-rgb   2020
+run infer-terramind-rgb-2013.yaml   terramind-rgb   2013
+run infer-terramind-rgb-2020.yaml   terramind-rgb   2020
 
 echo ""
 echo "Phase G inference complete."
