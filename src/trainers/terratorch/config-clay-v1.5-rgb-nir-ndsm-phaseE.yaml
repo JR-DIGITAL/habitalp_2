@@ -1,0 +1,165 @@
+# Clay v1.5 - Phase E (RGB+NIR+nDSM) cosine warmup
+name:
+  desc: Name of the experiment
+  value: "clay-v1.5-ndsm-phaseE"
+notes:
+  desc: Notes
+  value: "Phase E: Clay v1.5, RGB+NIR+nDSM 5ch, 2013 only, unfrozen backbone. LR=2.5e-5, weight_decay=0.05, max_epochs=150, cosine warmup."
+
+num_labels:
+  desc: Number of target classes without the nodata class
+  value: 23
+precalculated_weights:
+  desc: Optional rescaling weight given to each class and used with 'ce' loss
+  value: [
+      1.79093861e-08, 4.02753383e-07, 2.60186293e-06, 7.37115715e-08,
+      5.80145641e-08, 1.21055152e-08, 9.46775949e-08, 1.89100189e-07,
+      1.42311986e-07, 4.91407760e-08, 2.28127636e-07, 3.67691506e-08,
+      2.52270364e-08, 3.46363769e-07, 6.99910747e-08, 4.04184686e-08,
+      5.47532411e-08, 4.12640158e-07, 7.58935114e-08, 1.71395409e-07,
+      1.49135894e-08, 9.72166768e-08, 3.68124348e-08, 3.03124915e-07]
+ignore_index:
+  desc: Index to ignore in the loss function
+  value: 0
+matmul_precision:
+  desc: Internal precision of float32 matrix multiplications
+  value: "high"
+precision:
+  desc: Precision for training with mixed precision
+  value: "16-mixed"
+num_dataloader_workers:
+  desc: Number of parallel workers for data loading
+  value: 4
+gpu_id:
+  desc: GPU device ID to use
+  value: 0
+
+freeze_backbone:
+  desc: Freeze backbone weights
+  value: False
+
+model_factory:
+  desc: Terratorch model factory to use
+  value: "Clay1_5ModelFactory"
+
+model_args:
+  desc: Model arguments passed to Clay1_5ModelFactory.build_model
+  value:
+    backbone: "clay15"
+    decoder: "FCNDecoder"
+    in_channels: 5
+    bands: ["red", "green", "blue", "nir", "ndsm"]
+    pretrained: true
+    num_frames: 1
+    dim: 1024
+    depth: 24
+    heads: 16
+    dim_head: 64
+    mlp_ratio: 4
+    patch_size: 8
+    mask_ratio: 0.75
+    shuffle: false
+    decoder_dim: 512
+    decoder_depth: 6
+    decoder_heads: 8
+    decoder_dim_head: 64
+    decoder_mlp_ratio: 4
+    platform: ["naip"]
+    metadata:
+      naip:
+        band_order: ["red", "green", "blue", "nir", "ndsm"]
+        rgb_indices: [0, 1, 2]
+        gsd: 1.0
+        bands:
+          mean:       {red: 110.16, green: 115.41, blue: 98.15, nir: 139.04, ndsm: 9.19}
+          std:        {red:  47.23, green:  39.82, blue: 35.43, nir:  49.86, ndsm: 10.37}
+          wavelength: {red:   0.65, green:   0.56, blue:  0.48, nir:  0.842, ndsm: 0.0}
+
+scheduler:
+  desc: LR scheduler class name
+  value: "SequentialLR"
+
+scheduler_hparams:
+  desc: Scheduler hyperparameters
+  value:
+    interval: "epoch"
+    milestones: [10]
+    schedulers:
+      LambdaLR:
+        lr_lambda: "linear_warmup"
+      CosineAnnealingLR:
+        T_max: 140
+        eta_min: 1.0e-7
+
+hyperparameters:
+  desc: Training hyperparameters
+  value: {
+    "batch_size": 4,
+    "patch_size": 256,
+    "learning_rate": 0.000025,
+    "loss": "ce",
+    "monitor_metric": "val/mIoU",
+    "patience": 40,
+    "res": 0.5,
+    "train_batches_per_epoch": 512,
+    "val_batches_per_epoch": 64,
+    "backbone": "clay15",
+    "input_bands": ["rgb", "cir", "ndsm"],
+    "use_pretrained_model_weights": true,
+    "optimizer": "AdamW",
+    "optimizer_hparams": {"weight_decay": 0.05},
+    "min_epochs": 10,
+    "max_epochs": 150
+  }
+
+data_folder:
+  desc: Path to input data
+  value: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten"
+roi_shape_path:
+  desc: Path to ROI geopackage file
+  value: "roi/habitalp_2013_boundary.gpkg"
+
+training_years:
+  desc: List of year configurations
+  value:
+    - year: 2013
+      mask_path: "processed/mask/classes_v4_2013.tif"
+      image_data_paths:
+        rgb: "processed/orthophoto_gis_stmk/flug_2013_2015_rgb.tif"
+        cir: "processed/orthophoto_gis_stmk/falschfarben_2013_2015.tif"
+        ndsm: "processed/elevation_gis_stmk_2010-2012/ndsm.tif"
+
+class_names:
+  desc: List with class names without the nodata class
+  value: [
+    "Waterbody",
+    "Gravel bank, shoal, fluviatile",
+    "Erosion area, gully",
+    "Debris-covered areas",
+    "Rock",
+    "Young conif. (growth, thicket)",
+    "Young broadl. (growth, thicket)",
+    "Conif. pole timber CC<80",
+    "Conif. pole timber CC>=80",
+    "Broadl. pole timber",
+    "Conif. mature forest CC<80",
+    "Conif. mature forest CC>=80",
+    "Broadl. mature forest CC<80",
+    "Broadl. mature forest CC>=80",
+    "Old conif. forest, multilayered CC<80",
+    "Old conif. forest, multilayered CC>=80",
+    "Old broadl. forest, multilayered CC<80",
+    "Old broadl. forest, multilayered CC>=80",
+    "Clearcut areas",
+    "Mountain dwarf forest",
+    "Grassland, buffer strip",
+    "Alpine grassland, heath",
+    "Low importance or small extent",
+    ]
+
+wandb_project:
+  desc: W&B project name
+  value: "semantic-segmentation-terratorch-extended"
+wandb_key:
+  desc: W&B API key
+  value: 0f05335491f6648e2beb8972f303e87b9bcab99b

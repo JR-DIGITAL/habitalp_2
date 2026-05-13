@@ -1,6 +1,9 @@
 import numpy as np
+from contextlib import ExitStack
 from pathlib import Path
 import rasterio
+import rasterio.coords
+import rasterio.windows
 from torchmetrics import MetricCollection
 from torchmetrics.classification import (
     Accuracy,
@@ -12,95 +15,6 @@ from torchmetrics.classification import (
 from torchmetrics.classification import (
     ConfusionMatrix as TorchMetricsConfusionMatrix,
 )
-
-from ..trainers.utils import read_intersecting_area_of_two_rasters
-
-
-def configure_metric_collections(
-    num_classes: int,
-    averaging: str = "macro",
-    ignore_index: int = 255,
-):
-    task = "multiclass" if num_classes > 1 else "binary"
-
-    multiclass_metric_collection = MetricCollection(
-        [
-            Accuracy(
-                task=task,
-                num_classes=num_classes,
-                multidim_average="global",
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            JaccardIndex(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            Precision(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            Recall(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            F1Score(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-        ]
-    )
-
-    metric_collection_each_label = MetricCollection(
-        {
-            "ConfusionMatrix": TorchMetricsConfusionMatrix(
-                normalize="true",
-                task=task,
-                num_classes=num_classes,
-                ignore_index=ignore_index,
-            ),
-            "Accuracy": Accuracy(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "JaccardIndex": JaccardIndex(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "Precision": Precision(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "Recall": Recall(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "F1Score": F1Score(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-        },
-    )
-
-    return multiclass_metric_collection, metric_collection_each_label
 
 
 def physical_constraints_module(
@@ -122,168 +36,149 @@ def physical_constraints_module(
         experiment_dir (Path): Directory to save the constraint violation masks.
         output_name (str): Name of the resulting prediction raster file.
         export_mask_for_each_constraint (bool, optional): Exports violation constraint masks if true. Defaults to False.
-    """    
-    # Get mask and prediction arrays
-    mask_array, prediction_array, output_meta = read_intersecting_area_of_two_rasters(
-        mask_path, prediction_path
-        )
+    """
+    experiment_dir.mkdir(parents=True, exist_ok=True)
 
     non_forest_classes = [1, 2, 3, 4, 5, 19, 21, 22, 23]
     alpine_vegetation = [20, 22]
     grassland = [21, 22]
-
-    needle_dominating = [6, 8, 9, 11, 12, 15, 16, 20]
-    conifer_dominating = [7, 10, 13, 14, 17, 18]
     young_growth = [6, 7]
     pole_wood = [8, 9, 10]
     mature_forest = [11, 12, 13, 14]
     old_forest = [15, 16, 17, 18]
 
-    nodata_cells = (mask_array == output_meta["nodata"]) | (prediction_array == output_meta["nodata"])
-    output_meta.update(
-        {
-            "compress": "lzw",
-            "nodata": 255,
-            "tiled": True,
-            "predictor": 2,
-            "bigtiff": True,
+    with (
+        rasterio.open(mask_path) as mask_src,
+        rasterio.open(prediction_path) as pred_src,
+        rasterio.open(slope_path) as slope_src,
+        rasterio.open(dtm_path) as dtm_src,
+    ):
+        assert mask_src.crs == pred_src.crs
+
+        # Compute intersection bounding box of mask and prediction
+        intersection = rasterio.coords.BoundingBox(
+            left=max(mask_src.bounds.left, pred_src.bounds.left),
+            bottom=max(mask_src.bounds.bottom, pred_src.bounds.bottom),
+            right=min(mask_src.bounds.right, pred_src.bounds.right),
+            top=min(mask_src.bounds.top, pred_src.bounds.top),
+        )
+        if intersection.left >= intersection.right or intersection.bottom >= intersection.top:
+            raise ValueError("No overlapping area between rasters.")
+
+        mask_win = mask_src.window(*intersection)
+        orig_nodata = mask_src.nodata
+
+        output_meta = mask_src.meta.copy()
+        output_meta.update(
+            {
+                "transform": mask_src.window_transform(mask_win),
+                "height": round(mask_win.height),
+                "width": round(mask_win.width),
+                "compress": "lzw",
+                "nodata": 255,
+                "tiled": True,
+                "predictor": 2,
+                "bigtiff": True,
+                "dtype": "uint8",
+            }
+        )
+
+        constraint_filenames = {
+            1: "constraint_violation_1_non_forest_to_mature_forest.tif",
+            2: "constraint_violation_2_young_growth_to_old_forest.tif",
+            3: "constraint_violation_3_forest_setback_to_younger_stage.tif",
+            4: "constraint_violation_4_rock_to_grassland.tif",
+            5: "constraint_violation_5_water_bodies_on_steep_slopes.tif",
+            6: "constraint_violation_6_alpine_vegetation_in_lowland.tif",
+            "total": "constraint_violation_total.tif",
         }
-    )
 
-    # --- 1. Non-forest to mature/old forest ---
-    condition_1_true = np.asarray(
-            np.isin(mask_array, non_forest_classes) & np.isin(prediction_array, mature_forest + old_forest),
-        )
-    print(f"{np.count_nonzero(condition_1_true)} pixels violate constraint 1: Non-forest to mature/old forest")
+        violation_counts = [0] * 6
 
-    if export_mask_for_each_constraint:
-        condition_1_true = np.where(nodata_cells, 255, condition_1_true).astype(np.uint8)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_1_non_forest_to_mature_forest.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(condition_1_true.astype(rasterio.uint8), 1)
+        with ExitStack() as stack:
+            dst = stack.enter_context(
+                rasterio.open(experiment_dir / f"{output_name}.tif", "w", **output_meta)
+            )
+            if export_mask_for_each_constraint:
+                c_dsts = {
+                    k: stack.enter_context(
+                        rasterio.open(experiment_dir / v, "w", **output_meta)
+                    )
+                    for k, v in constraint_filenames.items()
+                }
 
-    total_violations = condition_1_true.copy()
-    del condition_1_true
+            # Process one block at a time — only the current tile is held in memory
+            for _, out_block in dst.block_windows(1):
+                block_bounds = rasterio.windows.bounds(out_block, output_meta["transform"])
+                tile_h = round(out_block.height)
+                tile_w = round(out_block.width)
 
-    # --- 2. Young growth to old forest ---
-    condition_2_true = np.asarray(
-            np.isin(mask_array, young_growth) & np.isin(prediction_array, old_forest),
-        )
-    print(f"{np.count_nonzero(condition_2_true)} pixels violate constraint 2: Young growth to old forest")
+                mask_tile = mask_src.read(
+                    1,
+                    window=mask_src.window(*block_bounds),
+                    out_shape=(tile_h, tile_w),
+                    resampling=rasterio.enums.Resampling.nearest,
+                )
+                pred_tile = pred_src.read(
+                    1,
+                    window=pred_src.window(*block_bounds),
+                    out_shape=(tile_h, tile_w),
+                    resampling=rasterio.enums.Resampling.nearest,
+                )
+                slope_tile = slope_src.read(
+                    1,
+                    window=slope_src.window(*block_bounds),
+                    out_shape=(tile_h, tile_w),
+                    resampling=rasterio.enums.Resampling.bilinear,
+                )
+                dtm_tile = dtm_src.read(
+                    1,
+                    window=dtm_src.window(*block_bounds),
+                    out_shape=(tile_h, tile_w),
+                    resampling=rasterio.enums.Resampling.bilinear,
+                )
 
-    if export_mask_for_each_constraint:
-        condition_2_true = np.where(nodata_cells, 255, condition_2_true).astype(np.uint8)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_2_young_growth_to_old_forest.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(condition_2_true.astype(rasterio.uint8), 1)
+                nodata_cells = (mask_tile == orig_nodata) | (pred_tile == orig_nodata)
 
-    total_violations = np.any([total_violations, condition_2_true], axis=0)
-    del condition_2_true
+                # --- Evaluate all 6 constraints ---
+                c1 = np.isin(mask_tile, non_forest_classes) & np.isin(pred_tile, mature_forest + old_forest)
+                c2 = np.isin(mask_tile, young_growth) & np.isin(pred_tile, old_forest)
+                c3 = (
+                    (np.isin(mask_tile, pole_wood) & np.isin(pred_tile, young_growth))
+                    | (np.isin(mask_tile, mature_forest) & np.isin(pred_tile, young_growth + pole_wood))
+                    | (np.isin(mask_tile, old_forest) & np.isin(pred_tile, young_growth + pole_wood + mature_forest))
+                )
+                c4 = (mask_tile == 5) & np.isin(pred_tile, grassland)
+                c5 = (slope_tile > 35.0) & (mask_tile != 1) & (pred_tile == 1)
+                c6 = (dtm_tile < 650.0) & ~np.isin(mask_tile, alpine_vegetation) & np.isin(pred_tile, alpine_vegetation)
 
-    # --- 3. Forest setback ---
-    condition_3_true = np.asarray(
-        (np.isin(mask_array, pole_wood) & np.isin(prediction_array, young_growth)) |
-        (np.isin(mask_array, mature_forest) & np.isin(prediction_array, young_growth + pole_wood)) |
-        (np.isin(mask_array, old_forest) & np.isin(prediction_array, young_growth + pole_wood + mature_forest))
-        )
-    print(f"{np.count_nonzero(condition_3_true)} pixels violate constraint 3: Forest setback to younger stage")
+                violation_counts[0] += int(np.count_nonzero(c1))
+                violation_counts[1] += int(np.count_nonzero(c2))
+                violation_counts[2] += int(np.count_nonzero(c3))
+                violation_counts[3] += int(np.count_nonzero(c4))
+                violation_counts[4] += int(np.count_nonzero(c5))
+                violation_counts[5] += int(np.count_nonzero(c6))
 
-    if export_mask_for_each_constraint:
-        condition_3_true = np.where(nodata_cells, 255, condition_3_true).astype(np.uint8)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_3_forest_setback_to_younger_stage.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(condition_3_true.astype(rasterio.uint8), 1)
+                total_violations = c1 | c2 | c3 | c4 | c5 | c6
 
-    total_violations = np.any([total_violations, condition_3_true], axis=0)
-    del condition_3_true
+                # Reset violating predictions to ground truth
+                result = np.where(total_violations & ~nodata_cells, mask_tile, pred_tile).astype(np.uint8)
+                dst.write(result, 1, window=out_block)
 
-    # --- 4. Rock to grassland ---
-    condition_4_true = np.asarray(
-            (mask_array == 5) & np.isin(prediction_array, grassland),
-        )
-    print(f"{np.count_nonzero(condition_4_true)} pixels violate constraint 4: Rock to grassland")
+                if export_mask_for_each_constraint:
+                    for i, c in enumerate([c1, c2, c3, c4, c5, c6], 1):
+                        tile = np.where(nodata_cells, 255, c).astype(np.uint8)
+                        c_dsts[i].write(tile, 1, window=out_block)
+                    total_tile = np.where(nodata_cells, 255, total_violations).astype(np.uint8)
+                    c_dsts["total"].write(total_tile, 1, window=out_block)
 
-    if export_mask_for_each_constraint:
-        condition_4_true = np.where(nodata_cells, 255, condition_4_true).astype(np.uint8)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_4_rock_to_grassland.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(condition_4_true.astype(rasterio.uint8), 1)
-
-    total_violations = np.any([total_violations, condition_4_true], axis=0)
-    del condition_4_true
-
-    # --- 5. Water bodies on steep slopes ---
-    with rasterio.open(slope_path) as slope_src:
-        slope_window = slope_src.window(*output_meta["bounds"])
-        slope_array = slope_src.read(1, window=slope_window, out_shape=mask_array.shape, resampling=rasterio.enums.Resampling.bilinear)
-
-    condition_5_true = np.asarray(
-            (slope_array > 35.0) & (mask_array != 1) & (prediction_array == 1),
-        )
-    del slope_array
-    print(f"{np.count_nonzero(condition_5_true)} pixels violate constraint 5: Water bodies on steep slopes (> 35°)")
-
-    if export_mask_for_each_constraint:
-        condition_5_true = np.where(nodata_cells, 255, condition_5_true).astype(np.uint8)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_5_water_bodies_on_steep_slopes.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(condition_5_true.astype(rasterio.uint8), 1)
-
-    total_violations = np.any([total_violations, condition_5_true], axis=0)
-    del condition_5_true
-
-    # --- 6. Alpine vegetation in lowland ---
-    with rasterio.open(dtm_path) as dtm_src:
-        dtm_window = dtm_src.window(*output_meta["bounds"])
-        dtm_array = dtm_src.read(1, window=dtm_window, out_shape=mask_array.shape, resampling=rasterio.enums.Resampling.bilinear)
-
-    condition_6_true = np.asarray(
-            (dtm_array < 650.0) & ~np.isin(mask_array, alpine_vegetation) & np.isin(prediction_array, alpine_vegetation),
-        )
-    del dtm_array
-    print(f"{np.count_nonzero(condition_6_true)} pixels violate constraint 6: Alpine vegetation in lowland (< 650m)")
-
-    if export_mask_for_each_constraint:
-        condition_6_true = np.where(nodata_cells, 255, condition_6_true).astype(np.uint8)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_6_alpine_vegetation_in_lowland.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(condition_6_true.astype(rasterio.uint8), 1)
-
-    total_violations = np.any([total_violations, condition_6_true], axis=0)
-    del condition_6_true
-
-    # --- Reset violations by resetting predictions to ground truth ---
-    prediction_array_with_resolved_physical_constraints = np.where(total_violations & ~nodata_cells, mask_array, prediction_array)
-    with rasterio.open(
-        experiment_dir / f"{output_name}.tif",
-        "w",
-        **output_meta,
-    ) as dst:
-        dst.write(prediction_array_with_resolved_physical_constraints.astype(rasterio.uint8), 1)
-
-    if export_mask_for_each_constraint:
-        total_violations = np.where(nodata_cells, 255, total_violations)  # Set nodata to 255
-        with rasterio.open(
-            experiment_dir / "constraint_violation_total.tif",
-            "w",
-            **output_meta,
-        ) as dst:
-            dst.write(total_violations.astype(rasterio.uint8), 1)
+    constraint_labels = [
+        "Non-forest to mature/old forest",
+        "Young growth to old forest",
+        "Forest setback to younger stage",
+        "Rock to grassland",
+        "Water bodies on steep slopes (> 35°)",
+        "Alpine vegetation in lowland (< 650m)",
+    ]
+    for i, (count, label) in enumerate(zip(violation_counts, constraint_labels), 1):
+        print(f"{count} pixels violate constraint {i}: {label}")
