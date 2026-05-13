@@ -1,0 +1,24 @@
+# Inference config: Clay v1 RGB+NIR Phase F — 2020 data
+model_type: clay
+
+input_data:
+  rgb: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/orthophoto_gis_stmk/flug_2019_2021_rgb.tif"
+  cir: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/orthophoto_gis_stmk/falschfarben_2019_2021.tif"
+
+mask_path: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/processed/mask/classes_v4_2020.tif"
+roi_path: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/roi/training_rois_2020.gpkg"
+
+models:
+  clay:
+    checkpoint: "/home/hkristen/habitalp2/models/clay-v1-rgb-nir-phaseF/clay-v1-rgb-nir-phaseF-epoch=94-step=48640-val/mIoU=0.2972.ckpt"
+
+inference:
+  patch_size: 256
+  res: 0.5
+  overlap: 64
+  delta: 8
+  batch_size: 4
+  n_classes: 23
+
+output:
+  dir: "/home/hkristen/Nextcloud/HabitAlp2.0/Originaldaten/model_output/clay-v1-rgb-nir-phaseF"

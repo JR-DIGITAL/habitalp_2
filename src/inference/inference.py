@@ -1,5 +1,5 @@
 """
-Inference script for habitalp2 semantic segementation models (=post-classificaiton).
+Inference script for habitalp2 models.
 
 Supports both Clay (terratorch) and UNet models with YAML configuration files.
 
@@ -36,7 +36,7 @@ from terratorch.tasks import SemanticSegmentationTask
 BASE_FOLDER = Path(__file__).resolve().parents[2]
 sys.path.append(str(BASE_FOLDER))
 
-from src.data.datamodules.unet_change import SegmentationDataModule
+from src.data.datamodules.habitalp import HabitAlp2DataModule
 from src.inference.eval import infer_on_whole_image
 from src.trainers.unet_segmentation.unet_segmentation import (
     MultiClassSemanticSegmentationTask,
@@ -63,8 +63,8 @@ def load_config(config_path):
     return config
 
 
-def load_clay_model(checkpoint_path, device):
-    """Load Clay/terratorch model from checkpoint.
+def load_terratorch_model(checkpoint_path, device):
+    """Load terratorch model from checkpoint.
 
     Args:
         checkpoint_path (Path): Path to fine-tuned model checkpoint (.ckpt).
@@ -73,7 +73,7 @@ def load_clay_model(checkpoint_path, device):
     Returns:
         SemanticSegmentationTask: Model in eval mode.
     """
-    print(f"Loading Clay model from: {checkpoint_path}")
+    print(f"Loading TerraTorch model from: {checkpoint_path}")
     task = SemanticSegmentationTask.load_from_checkpoint(
         checkpoint_path,
         map_location=device
@@ -166,8 +166,8 @@ Examples:
     # Load configuration file
     config_path = Path(args.config)
     if not config_path.is_absolute():
-        # Look for config relative to script directory
-        script_dir = Path(__file__).parent
+        # Look for config relative to cwd
+        script_dir = Path.cwd()
         config_path = script_dir / args.config
 
     print(f"Loading configuration from: {config_path}")
@@ -191,6 +191,7 @@ Examples:
     # Get inference parameters from config
     inference_config = config['inference']
     patch_size = inference_config['patch_size']
+    res = inference_config['res']
     overlap = inference_config['overlap']
     delta = inference_config['delta']
     batch_size = inference_config['batch_size']
@@ -225,6 +226,7 @@ Examples:
         print(f"  {key}: {path}")
     print(f"Mask: {mask_path}")
     print(f"Patch size: {patch_size}x{patch_size}")
+    print(f"Resolution: {'Original' if res is None else res}")
     print(f"Overlap: {overlap}px")
     print(f"Delta cropping: {delta}px")
     print(f"Batch size: {batch_size}")
@@ -236,8 +238,8 @@ Examples:
     device = torch.device("cpu") if args.cpu else torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"\nDevice: {device}")
 
-    if model_type == "clay":
-        task = load_clay_model(checkpoint_path, device)
+    if model_type in ["clay", "clay_v1_5", "dofa", "prithvi", "terramind", "unet_terratorch"]:
+        task = load_terratorch_model(checkpoint_path, device)
     elif model_type == "unet":
         task = load_unet_model(checkpoint_path, device)
     else:
@@ -247,7 +249,7 @@ Examples:
 
     # Initialize datamodule
     print("\nInitializing datamodule...")
-    datamodule = SegmentationDataModule(
+    datamodule = HabitAlp2DataModule(
         image_paths=input_data,
         mask_path=str(mask_path),
         roi_shape_path=roi_path,
@@ -255,6 +257,7 @@ Examples:
         batch_size=1,
         patch_size=(patch_size, patch_size),
         num_workers=0,
+        res=res,
         image_paths_pred=input_data,
         prediction_mask_path=str(mask_path),
     )

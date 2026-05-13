@@ -13,6 +13,16 @@ from lightning import LightningDataModule
 from lightning.pytorch import Trainer
 from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, RichProgressBar
 from lightning.pytorch.loggers import WandbLogger
+
+
+class _FilteredWandbLogger(WandbLogger):
+    """WandbLogger that drops per-class scalar charts (logged as images instead)."""
+    _SKIP_PREFIXES = ("/IoU_", "Class_Accuracy_", "Class_F1Score")
+
+    def log_metrics(self, metrics, step=None):
+        filtered = {k: v for k, v in metrics.items()
+                    if not any(p in k for p in self._SKIP_PREFIXES)}
+        super().log_metrics(filtered, step=step)
 from lightning.pytorch.tuner import Tuner
 from rasterio.warp import Resampling, reproject
 from torchgeo.datasets.utils import percentile_normalization
@@ -55,8 +65,8 @@ def compute_class_weights(freq_0=80, freq_1=20):
 
 
 def compute_final_metrics(
-    reference_change_map: Path,
-    prediction_change_map: Path,
+    reference_file_path: Path,
+    prediction_file_path: Path,
     num_classes: int,
     class_names: list[str] = None,
     averaging: str = "macro",
@@ -65,8 +75,8 @@ def compute_final_metrics(
     """Compute final metrics from the reference and prediction change maps.
 
     Args:
-        reference_change_map (Path): Reference change map path.
-        prediction_change_map (Path): Prediction change map path.
+        reference_file_path (Path): Reference map file path.
+        prediction_file_path (Path): Prediction map file path.
         num_classes (int): Number of classes in the segmentation task.
         class_names (list[str], optional): List of class names for plotting. Defaults to None.
         averaging (str, optional): Defines the reduction that is applied over labels. Defaults to "macro".
@@ -80,87 +90,18 @@ def compute_final_metrics(
     
     task = "multiclass" if num_classes > 1 else "binary"
 
-    multiclass_metric_collection = MetricCollection(
-        [
-            Accuracy(
-                task=task,
-                num_classes=num_classes,
-                multidim_average="global",
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            JaccardIndex(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            Precision(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            Recall(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-            F1Score(
-                task=task,
-                num_classes=num_classes,
-                average=averaging,
-                ignore_index=ignore_index,
-            ),
-        ]
+    multiclass_metric_collection = create_metric_collection(
+        num_classes=num_classes, task=task, averaging=averaging, ignore_index=ignore_index
     )
 
-    metric_collection_each_label = MetricCollection(
-        {
-            "ConfusionMatrix": TorchMetricsConfusionMatrix(
-                normalize="true",
-                task=task,
-                num_classes=num_classes,
-                ignore_index=ignore_index,
-            ),
-            "Accuracy": Accuracy(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "JaccardIndex": JaccardIndex(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "Precision": Precision(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "Recall": Recall(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-            "F1Score": F1Score(
-                task=task,
-                num_classes=num_classes,
-                average="none",
-                ignore_index=ignore_index,
-            ),
-        },
+    metric_collection_each_label = create_metric_collection(
+        num_classes=num_classes, task=task, averaging="none", ignore_index=ignore_index
     )
 
     # Load mask and prediction
     with (
-        rasterio.open(reference_change_map) as mask_src,
-        rasterio.open(prediction_change_map) as pred_src,
+        rasterio.open(reference_file_path) as mask_src,
+        rasterio.open(prediction_file_path) as pred_src,
     ):
         # Calculate intersecting bounding box
         bounds_mask = mask_src.bounds
@@ -270,9 +211,12 @@ def compute_final_metrics(
     figure_collection = []
 
     # Plot Confusion Matrix
-    fig1, ax = plt.subplots(figsize=(8, 8), dpi=100)
-    metric_collection_each_label['ConfusionMatrix'].plot(ax=ax, labels=class_names)
+    figsize = num_classes * 0.75 + 4
+    fig1, ax = plt.subplots(figsize=(figsize, figsize), dpi=100)
+    metric_collection_each_label['MulticlassConfusionMatrix'].plot(ax=ax, labels=class_names)
+    [x.set_horizontalalignment("right") for x in ax.get_xticklabels()]
     ax.set_title("Confusion Matrix")
+    plt.tight_layout()
     figure_collection.append(fig1)
     plt.close(fig1)
 
@@ -458,6 +402,73 @@ def find_optimal_learning_rate(
     return suggested_lr, fig
 
 
+def create_metric_collection(
+    num_classes: int,
+    task: str = "multiclass",
+    averaging: str = "macro",
+    ignore_index: int = 0,
+) -> MetricCollection:
+    """
+    Create a MetricCollection for multi-class classification.
+
+    Args:
+        num_classes: Number of classes
+        task: Task type (e.g., "multiclass")
+        averaging: Averaging method for metrics
+        ignore_index: Index to ignore in metrics
+
+    Returns:
+        MetricCollection: Configured metric collection
+    """
+
+    metric_collection = MetricCollection(
+        {
+            "Accuracy": Accuracy(
+                task=task,
+                num_classes=num_classes,
+                average=averaging,
+                ignore_index=ignore_index,
+            ),
+            "JaccardIndex": JaccardIndex(
+                task=task,
+                num_classes=num_classes,
+                average=averaging,
+                ignore_index=ignore_index,
+            ),
+            "Precision": Precision(
+                task=task,
+                num_classes=num_classes,
+                average=averaging,
+                ignore_index=ignore_index,
+            ),
+            "Recall": Recall(
+                task=task,
+                num_classes=num_classes,
+                average=averaging,
+                ignore_index=ignore_index,
+            ),
+            "F1Score": F1Score(
+                task=task,
+                num_classes=num_classes,
+                average=averaging,
+                ignore_index=ignore_index,
+            ),
+        },
+    )
+
+    if averaging == "none":
+        metric_collection.add_metrics(
+            TorchMetricsConfusionMatrix(
+                normalize="true",
+                task=task,
+                num_classes=num_classes,
+                ignore_index=ignore_index,
+            )
+        )
+
+    return metric_collection
+
+
 def load_config_from_yaml(config_path: Path) -> dict:
     """Load yaml config file and return as a dictionary.
 
@@ -540,7 +551,7 @@ def setup_training(
     if logging == "local":
         os.environ["WANDB_BASE_URL"] = "http://localhost:8080"
         wandb.login()
-        wb_logger = WandbLogger(
+        wb_logger = _FilteredWandbLogger(
             name=experiment_name,
             save_dir="logs_dir",
             project=wandb_project,
@@ -550,7 +561,7 @@ def setup_training(
         if wandb_key is None:
             raise ValueError("wandb_key is required for remote logging")
         wandb.login(key=wandb_key)
-        wb_logger = WandbLogger(
+        wb_logger = _FilteredWandbLogger(
             name=experiment_name,
             project=wandb_project,
             log_model=log_model,
@@ -1674,4 +1685,3 @@ def get_change_array(
     )
 
     return change_map
-    
