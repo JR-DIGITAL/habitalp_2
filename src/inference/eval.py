@@ -20,8 +20,8 @@ import wandb
 BASE_FOLDER = Path(__file__).resolve().parents[2]
 sys.path.append(str(BASE_FOLDER))
 
-from src.data.datamodules.unet_change import SegmentationDataModule
-from src.trainers.unet_segmentation.train import get_datamodule
+from src.data.datamodules.habitalp import HabitAlp2DataModule
+from src.trainers.train_torchgeo import get_datamodule
 from src.trainers.unet_segmentation.unet_segmentation import (
     MultiClassSemanticSegmentationTask,
 )
@@ -144,7 +144,6 @@ def weighted_merge(
         'tiled': True,
         'blockxsize': 256,
         'blockysize': 256,
-        'nodata': 0,
     })
 
     print("  Building spatial index...")
@@ -248,14 +247,13 @@ def weighted_merge(
 
 
 def infer_on_whole_image(
-    datamodule: SegmentationDataModule,
+    datamodule: HabitAlp2DataModule,
     task,
     experiment_dir: str,
     patch_size: int | None = 256,
     overlap: int = 64,
     delta: int = 0,
     predict_on_test_ds: bool = False,
-    roi: BoundingBox | None = None,
     output_filename: str = "prediction",
     inference_batch_size: int = 1,
     chunk_size: int = 4096,
@@ -275,7 +273,6 @@ def infer_on_whole_image(
         overlap: Overlap width in pixels on each patch side for blending.
         delta: Pixels to crop from patch edges to remove unreliable predictions.
         predict_on_test_ds: If True, predict on test dataset instead of prediction dataset.
-        roi: Optional bounding box to limit predictions to region of interest.
         output_filename: Base name for output prediction file (without extension).
         inference_batch_size: Number of patches to process in parallel on GPU.
         chunk_size: Size of chunks for memory-efficient output merging.
@@ -286,9 +283,16 @@ def infer_on_whole_image(
         patch_size = datamodule.patch_size[0]
     stride = patch_size - (overlap * 2)
 
-    datamodule.setup(stage="predict_on_test_ds" if predict_on_test_ds else "predict", roi=roi, stride=stride)
-    ds_pred = datamodule.predict_dataloader()
-    res = datamodule.predict_dataset.res
+    if predict_on_test_ds:
+        datamodule.setup(stage="test", stride=stride)
+        ds_pred = datamodule.test_dataloader()
+        res = datamodule.test_dataset.res
+        crs = datamodule.test_dataset.crs
+    else:
+        datamodule.setup(stage="predict", stride=stride)
+        ds_pred = datamodule.predict_dataloader()
+        res = datamodule.predict_dataset.res
+        crs = datamodule.predict_dataset.crs
 
     print("Create Predictions ...")
     print(f"  Patch size: {patch_size}x{patch_size}")
@@ -325,7 +329,6 @@ def infer_on_whole_image(
 
         batch_samples.append(sample["image"])
         batch_metadata.append({
-            'crs': sample["crs"][0],
             'bbox': sample["bounds"][0],
             'mask': sample["mask"],
             'x': x,
@@ -355,19 +358,27 @@ def infer_on_whole_image(
                 logits = y_hat_batch[i].detach().cpu().numpy()
                 num_classes = logits.shape[0]
 
+                if torch.is_tensor(meta['bbox']):
+                    xmin = meta['bbox'][0].item()
+                    ymax = meta['bbox'][4].item()
+                else:
+                    xmin = meta['bbox'][0].start
+                    ymax = meta['bbox'][1].stop
+
+
                 if delta > 0:
                     logits_cropped = logits[:, delta:-delta, delta:-delta]
                     cropped_size = patch_size - 2 * delta
                     out_transform = rasterio.transform.from_origin(
-                        meta['bbox'].minx + delta * res[0],
-                        meta['bbox'].maxy - delta * res[1],
+                        xmin + delta * res[0],
+                        ymax - delta * res[1],
                         res[0], res[1]
                     )
                 else:
                     logits_cropped = logits
                     cropped_size = patch_size
                     out_transform = rasterio.transform.from_origin(
-                        meta['bbox'].minx, meta['bbox'].maxy, res[0], res[1]
+                        xmin, ymax, res[0], res[1]
                     )
 
                 with rasterio.open(
@@ -375,7 +386,7 @@ def infer_on_whole_image(
                     "w",
                     driver="GTiff",
                     transform=out_transform,
-                    crs=meta['crs'],
+                    crs=crs,
                     count=num_classes,
                     width=cropped_size,
                     height=cropped_size,
@@ -383,6 +394,7 @@ def infer_on_whole_image(
                     compress="lzw",
                     tiled=True,
                     predictor=2,
+                    nodata=task.hparams["ignore_index"],
                 ) as dst:
                     dst.write(logits_cropped)
 
