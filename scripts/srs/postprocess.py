@@ -32,11 +32,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from config import DTM, PP_DIR, REF_2013, SLOPE, all_experiments, data_root
+from config import DTM, PP_DIR, REF_2003, REF_2013, SLOPE, all_experiments, data_root
 
 # The 2013 prediction is checked against the 2003 reference, the 2020 prediction
 # against the 2013 reference.
-PREVIOUS_REFERENCE = {2013: "processed/mask/classes_v3_2003.tif", 2020: REF_2013}
+PREVIOUS_REFERENCE = {2013: REF_2003, 2020: REF_2013}
 
 # forest class -> (CC<80 id, CC>=80 id)
 CANOPY_COVER_PAIRS = {
