@@ -1,4 +1,4 @@
-"""Cross-temporal visual comparison figure of the SRS manuscript.
+"""Cross-temporal visual comparison figure of the MDPI manuscript.
 
 Columns: RGB 2013 | RGB 2020 | reference change | Clay v1.0 pixel prediction |
 post-processed polygon output. Two example windows are selected automatically
@@ -6,7 +6,7 @@ from the 2013-2020 reference change map as the most class-diverse windows
 inside the four LiDAR-covered test patches.
 
 Needs HABITALP_DATA (reference change map, orthophotos, Clay v1.0 outputs before
-and after post-processing). Output: outputs/srs/figures/.
+and after post-processing). Output: outputs/mdpi/figures/.
 """
 import os
 from pathlib import Path
@@ -18,7 +18,7 @@ import matplotlib as mpl
 from matplotlib.patches import Patch
 
 D = Path(os.environ["HABITALP_DATA"])
-OUT = Path(__file__).resolve().parents[2] / "outputs" / "srs" / "figures"
+OUT = Path(__file__).resolve().parents[2] / "outputs" / "mdpi" / "figures"
 REF = D / "labels/habitalp_change_2013_2020.tif"
 PRED = D / "model_output/clay-v1-rgb-nir-ndsm-phaseE/change_map_2013-2020.tif"
 POST = (D / "model_output/clay-v1-rgb-nir-ndsm-phaseE/"

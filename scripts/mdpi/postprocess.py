@@ -1,4 +1,4 @@
-"""Operational post-processing of the model predictions (SRS manuscript, RQ4).
+"""Operational post-processing of the model predictions (MDPI manuscript, RQ4).
 
 The pipeline has four steps:
   1. Physical-plausibility filtering (this script, --step constraints): pixels
@@ -20,8 +20,8 @@ with the attributes Class and CCD, is the input of step 4.
 Afterwards run `evaluate.py --stage after`.
 
 Usage:
-    HABITALP_DATA=/path/to/data python scripts/srs/postprocess.py --step constraints
-    HABITALP_DATA=/path/to/data python scripts/srs/postprocess.py --step canopy-cover \
+    HABITALP_DATA=/path/to/data python scripts/mdpi/postprocess.py --step constraints
+    HABITALP_DATA=/path/to/data python scripts/mdpi/postprocess.py --step canopy-cover \
         --polygonfix-dir /path/to/polygonfix_output
 """
 from __future__ import annotations
