@@ -7,10 +7,10 @@ and the 2.5th/97.5th percentiles of macro IoU and F1 give the 95 % CI
 (src/trainers/bootstrap.py). The macro IoU recomputed from the summed confusion
 matrix is checked against metrics_master.csv.
 
-Writes outputs/srs/metrics_ci.csv and outputs/srs/confusion_matrix_change_*.csv.
+Writes outputs/mdpi/metrics_ci.csv and outputs/mdpi/confusion_matrix_change_*.csv.
 
 Usage:
-    HABITALP_DATA=/path/to/data python scripts/srs/bootstrap_ci.py
+    HABITALP_DATA=/path/to/data python scripts/mdpi/bootstrap_ci.py
 """
 from __future__ import annotations
 

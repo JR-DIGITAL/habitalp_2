@@ -1,5 +1,5 @@
-"""Fig 1 of the SRS manuscript: study area map with UTM grid, scale bar,
-north arrow and an Austria inset. Output: outputs/srs/figures/Fig_1.png (600 dpi).
+"""Fig 1 of the MDPI manuscript: study area map with UTM grid, scale bar,
+north arrow and an Austria inset. Output: outputs/mdpi/figures/Fig_1.png (600 dpi).
 
 Environment variables:
   HABITALP_DATA   HabitAlp 2.0 dataset root (splits/outlines.gpkg, 2019 orthophoto)
@@ -20,7 +20,7 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 D = Path(os.environ["HABITALP_DATA"])
 NE_DIR = Path(os.environ["NE_DIR"])
-OUT = Path(__file__).resolve().parents[2] / "outputs" / "srs" / "figures" / "Fig_1.png"
+OUT = Path(__file__).resolve().parents[2] / "outputs" / "mdpi" / "figures" / "Fig_1.png"
 
 ORTHO = Path(os.environ.get("HABITALP_ORTHO", D / "data_2020/aerial_rgb_2019_2021.tif"))
 OUTLINES = D / "splits/outlines.gpkg"

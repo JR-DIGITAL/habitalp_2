@@ -1,9 +1,9 @@
-"""Chart figures of the SRS manuscript from the CSVs in outputs/srs/.
+"""Chart figures of the MDPI manuscript from the CSVs in outputs/mdpi/.
 
   Fig_benchmark.png      macro IoU per model, binary and multi-class change
   Fig_confusion_9x9.png  row-normalised change-class confusion matrix, Clay v1.0
 
-Needs no raw data. Usage: python scripts/srs/make_figures.py
+Needs no raw data. Usage: python scripts/mdpi/make_figures.py
 """
 from __future__ import annotations
 

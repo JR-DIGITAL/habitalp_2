@@ -1,10 +1,10 @@
-"""Print the result tables of the SRS manuscript from the CSVs in outputs/srs/.
+"""Print the result tables of the MDPI manuscript from the CSVs in outputs/mdpi/.
 
 Needs no raw data, so the published numbers can be checked against the
 released metric files. Values are rounded to two decimals as in the paper;
 deltas are computed from unrounded values.
 
-Usage: python scripts/srs/paper_tables.py
+Usage: python scripts/mdpi/paper_tables.py
 """
 from __future__ import annotations
 
