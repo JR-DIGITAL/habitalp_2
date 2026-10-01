@@ -1,9 +1,10 @@
 """Shared paths and experiment registry for the SRS manuscript scripts.
 
-Set HABITALP_DATA to the root of the HabitAlp 2.0 data (the folder that holds
-processed/, roi/, habitalp_change/ and model_output/). Model predictions are
-expected under model_output/<experiment>/, the output.dir of the inference
-configs in src/inference/configs/.
+Set HABITALP_DATA to a local copy of the HabitAlp 2.0 dataset, version v4
+(https://huggingface.co/datasets/JR-DIGITAL/habitalp2.0, folders labels/,
+data_2013/, data_2020/, splits/). Model predictions are expected under
+$HABITALP_DATA/model_output/<experiment>/; point output.dir of the inference
+configs in src/inference/configs/ there.
 """
 from __future__ import annotations
 
@@ -21,13 +22,17 @@ def data_root() -> Path:
     return Path(root)
 
 
-# Reference rasters, relative to the data root
-REF_2013 = "processed/mask/classes_v4_2013.tif"
-REF_2013_TEST_CELLS = "processed/mask/classes_v4_2013_test_cells.tif"
-REF_2020 = "processed/mask/classes_v4_2020.tif"
-REF_CHANGE_2013_2020 = "habitalp_change/habitalp_change_v4_2013-2020.tif"
-DTM = "processed/elevation_gis_stmk_2010-2012/dtm.tif"
-SLOPE = "processed/elevation_gis_stmk_2010-2012/slope.tif"
+# Dataset files, relative to the data root (HuggingFace layout, v4 labels)
+REF_2003 = "labels/classes_2003.tif"
+REF_2013 = "labels/classes_2013.tif"
+REF_2013_TEST_CELLS = "labels/classes_2013_test_cells.tif"
+REF_2020 = "labels/classes_2020.tif"
+REF_CHANGE_2013_2020 = "labels/habitalp_change_2013_2020.tif"
+DTM = "data_2013/dtm.tif"
+SLOPE = "data_2013/slope.tif"
+RGB_2013 = "data_2013/aerial_rgb_2013_2015.tif"
+RGB_2020 = "data_2020/aerial_rgb_2019_2021.tif"
+OUTLINES = "splits/outlines.gpkg"  # study area (year 2013) and test patches (year 2020)
 
 # Subfolder of model_output/<experiment>/ that holds the post-processed results
 PP_DIR = "constraint_resolution_+_polygonfix_cc_updated"

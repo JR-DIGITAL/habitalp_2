@@ -161,7 +161,7 @@ python scripts/srs/paper_tables.py   # prints all result tables of the paper
 python scripts/srs/make_figures.py   # benchmark bar chart and confusion matrix
 ```
 
-To recompute everything from the data, run these steps in order. Data paths in the training and inference configs are examples from our setup and need to be adapted. The evaluation scripts read the data root from `HABITALP_DATA`.
+To recompute everything from the data, download version v4 of the [HabitAlp 2.0 dataset](https://huggingface.co/datasets/JR-DIGITAL/habitalp2.0) and set `HABITALP_DATA` to its folder; the evaluation scripts read all labels from there. The paper uses the v4 labels, whose canopy-cover classes are derived from LiDAR (see the dataset card); version v3 belongs to the arXiv preprint. Data paths in the training and inference configs are examples from our setup and need to be adapted.
 
 | Step | Command | Output |
 |------|---------|--------|

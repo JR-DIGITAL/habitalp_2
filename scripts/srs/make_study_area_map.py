@@ -2,9 +2,8 @@
 north arrow and an Austria inset. Output: outputs/srs/figures/Fig_1.png (600 dpi).
 
 Environment variables:
-  HABITALP_DATA   HabitAlp 2.0 data root (roi/ vectors)
-  HABITALP_ORTHO  2019 RGB orthophoto used as basemap
-                  (default: $HABITALP_DATA/processed/orthophoto_gis_stmk/flug_2019_2021_rgb.tif)
+  HABITALP_DATA   HabitAlp 2.0 dataset root (splits/outlines.gpkg, 2019 orthophoto)
+  HABITALP_ORTHO  optional: other basemap than data_2020/aerial_rgb_2019_2021.tif
   NE_DIR          folder with the Natural Earth admin-1 10m shapefile
                   (ne_10m_admin_1_states_provinces.shp, https://www.naturalearthdata.com/)
 """
@@ -23,14 +22,14 @@ D = Path(os.environ["HABITALP_DATA"])
 NE_DIR = Path(os.environ["NE_DIR"])
 OUT = Path(__file__).resolve().parents[2] / "outputs" / "srs" / "figures" / "Fig_1.png"
 
-ORTHO = Path(os.environ.get("HABITALP_ORTHO", D / "processed/orthophoto_gis_stmk/flug_2019_2021_rgb.tif"))
-HABITALP = D / "roi/habitalp_2013_boundary.gpkg"
-TEST2020 = D / "roi/training_rois_2020.gpkg"
+ORTHO = Path(os.environ.get("HABITALP_ORTHO", D / "data_2020/aerial_rgb_2019_2021.tif"))
+OUTLINES = D / "splits/outlines.gpkg"
 
 mpl.rcParams.update({"font.size": 9, "font.family": "DejaVu Sans"})
 
-hab = gpd.read_file(HABITALP).to_crs(32633)
-test = gpd.read_file(TEST2020).to_crs(32633)
+outlines = gpd.read_file(OUTLINES).to_crs(32633)
+hab = outlines[outlines["year"] == 2013]
+test = outlines[outlines["year"] == 2020]
 
 pad = 1000
 minx, miny, maxx, maxy = hab.total_bounds

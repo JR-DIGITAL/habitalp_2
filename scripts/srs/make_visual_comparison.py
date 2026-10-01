@@ -19,12 +19,12 @@ from matplotlib.patches import Patch
 
 D = Path(os.environ["HABITALP_DATA"])
 OUT = Path(__file__).resolve().parents[2] / "outputs" / "srs" / "figures"
-REF = D / "habitalp_change/habitalp_change_v4_2013-2020.tif"
+REF = D / "labels/habitalp_change_2013_2020.tif"
 PRED = D / "model_output/clay-v1-rgb-nir-ndsm-phaseE/change_map_2013-2020.tif"
 POST = (D / "model_output/clay-v1-rgb-nir-ndsm-phaseE/"
         "constraint_resolution_+_polygonfix_cc_updated/change_map_2013-2020.tif")
-RGB13 = D / "processed/orthophoto_gis_stmk/flug_2013_2015_rgb.tif"
-RGB20 = D / "processed/orthophoto_gis_stmk/flug_2019_2021_rgb.tif"
+RGB13 = D / "data_2013/aerial_rgb_2013_2015.tif"
+RGB20 = D / "data_2020/aerial_rgb_2019_2021.tif"
 
 # Change-class ids follow src/trainers/utils.py::get_change_array
 CLASSES = [
