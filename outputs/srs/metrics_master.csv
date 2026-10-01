@@ -1,0 +1,481 @@
+model,type,phase,modality,setting,task,postproc,metric,value,source_csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_BA,0.4961508512496948,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_IoU,0.320211112499237,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_F1,0.4622510373592376,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Precision,0.4551855325698852,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Recall,0.4961508512496948,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_BA,0.7062087655067444,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_IoU,0.5267344117164612,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_F1,0.6715162396430969,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Precision,0.6662205457687378,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Recall,0.7062087655067444,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_BA,0.4476177096366882,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_IoU,0.26894611120224,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_F1,0.4059171676635742,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Precision,0.417336642742157,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Recall,0.4476177096366882,model_output/clay-v1-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_BA,0.5658025741577148,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_IoU,0.3866026401519775,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_F1,0.5292578935623169,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Precision,0.55161052942276,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Recall,0.5658025741577148,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_BA,0.5572284460067749,model_output/clay-v1-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_IoU,0.3754523992538452,model_output/clay-v1-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_F1,0.5457160472869873,model_output/clay-v1-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Precision,0.5559654235839844,model_output/clay-v1-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Recall,0.5572284460067749,model_output/clay-v1-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_BA,0.5948206782341003,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_IoU,0.4281917810440063,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_F1,0.5952476859092712,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Precision,0.5959472060203552,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Recall,0.5948206782341003,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_BA,0.4056902825832367,model_output/clay-v1-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_IoU,0.172192633152008,model_output/clay-v1-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_F1,0.2818556725978851,model_output/clay-v1-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Precision,0.3675460815429687,model_output/clay-v1-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Recall,0.4056902825832367,model_output/clay-v1-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_BA,0.4953434765338897,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_IoU,0.228529155254364,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_F1,0.3596994578838348,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Precision,0.4119339883327484,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Recall,0.4953434765338897,model_output/clay-v1-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_BA,0.5066549777984619,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_IoU,0.3266972601413727,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_F1,0.4697001874446869,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Precision,0.4657787680625915,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Recall,0.5066549777984619,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_BA,0.6622762084007263,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_IoU,0.4775447249412536,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_F1,0.6178876757621765,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Precision,0.6348541378974915,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Recall,0.6622762084007263,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_BA,0.4270446896553039,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_IoU,0.2518624663352966,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_F1,0.3910025656223297,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Precision,0.3947654664516449,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Recall,0.4270446896553039,model_output/clay-v1-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_BA,0.5157816410064697,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_IoU,0.3397471606731415,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_F1,0.4738354980945587,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Precision,0.5147191286087036,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Recall,0.5157816410064697,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_BA,0.637414813041687,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_IoU,0.4309045672416687,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_F1,0.6016634702682495,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Precision,0.6488977074623108,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Recall,0.637414813041687,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_BA,0.6302323341369629,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_IoU,0.4475992023944855,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_F1,0.618108868598938,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Precision,0.6266965866088867,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Recall,0.6302323341369629,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_BA,0.4726176261901855,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_IoU,0.2331169843673706,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_F1,0.360633373260498,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Precision,0.3873457610607147,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Recall,0.4726176261901855,model_output/clay-v1-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_BA,0.4451790452003479,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_IoU,0.1962794512510299,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_F1,0.3064244389533996,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Precision,0.3834328353404999,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.0,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Recall,0.4451790452003479,model_output/clay-v1-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_BA,0.4717243015766144,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_IoU,0.2882532179355621,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_F1,0.4288229942321777,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Precision,0.4254353046417236,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Recall,0.4717243015766144,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2013.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_BA,0.6448875069618225,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_IoU,0.4566312730312347,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_F1,0.5990111231803894,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Precision,0.6074917912483215,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Recall,0.6448875069618225,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_BA,0.4100655317306518,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_IoU,0.2331654131412506,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_F1,0.3629308342933655,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Precision,0.3807900846004486,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Recall,0.4100655317306518,model_output/clay-v1.5-rgb-nir-phaseF/classification_metrics_2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_BA,0.5425376892089844,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_IoU,0.3629676103591919,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_F1,0.499927818775177,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Precision,0.5291301012039185,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Recall,0.5425376892089844,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_BA,0.5730658769607544,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_IoU,0.3803457915782928,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_F1,0.5510331392288208,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Precision,0.574273407459259,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Recall,0.5730658769607544,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_BA,0.6116276979446411,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_IoU,0.4394466876983642,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_F1,0.608640730381012,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Precision,0.6086955070495605,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Recall,0.6116276979446411,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_BA,0.3802100718021393,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_IoU,0.156418964266777,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_F1,0.2552730441093445,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Precision,0.3450250029563904,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Recall,0.3802100718021393,model_output/clay-v1.5-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_BA,0.4527473449707031,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_IoU,0.1969855725765228,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_F1,0.3112638890743255,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Precision,0.364189088344574,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Recall,0.4527473449707031,model_output/clay-v1.5-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_BA,0.4757125079631805,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_IoU,0.3054657578468323,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_F1,0.4483631551265716,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Precision,0.4435831308364868,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Recall,0.4757125079631805,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_BA,0.6771432161331177,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_IoU,0.5035046935081482,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_F1,0.642876148223877,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Precision,0.6493037343025208,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Recall,0.6771432161331177,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_BA,0.3604582250118255,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_IoU,0.2190157175064087,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_F1,0.3507947921752929,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Precision,0.3766555488109588,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Recall,0.3604582250118255,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_BA,0.4693017899990082,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_IoU,0.3185105323791504,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_F1,0.4582336843013763,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Precision,0.514700174331665,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Recall,0.4693017899990082,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_BA,0.6076111197471619,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_IoU,0.3956754803657532,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_F1,0.5656554698944092,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Precision,0.6218776702880859,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Recall,0.6076111197471619,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_BA,0.6069811582565308,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_IoU,0.4260196983814239,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_F1,0.5970368385314941,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Precision,0.6038185954093933,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Recall,0.6069811582565308,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_BA,0.4398261308670044,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_IoU,0.2026520818471908,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_F1,0.3209302425384521,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Precision,0.3607358634471893,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Recall,0.4398261308670044,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_BA,0.4318493604660034,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_IoU,0.201421856880188,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_F1,0.3180358111858368,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Precision,0.3779586255550384,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Clay v1.5,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Recall,0.4318493604660034,model_output/clay-v1.5-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_BA,0.4762715101242065,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2013.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_IoU,0.2990882992744446,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2013.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_F1,0.438434362411499,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2013.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Precision,0.4296123683452606,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2013.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Recall,0.4762715101242065,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2013.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_BA,0.6158943176269531,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_IoU,0.4272360205650329,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_F1,0.5670149922370911,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Precision,0.5973027944564819,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Recall,0.6158943176269531,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_BA,0.3921404480934143,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_IoU,0.2250495254993438,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_F1,0.3509162664413452,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Precision,0.3712068796157837,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Recall,0.3921404480934143,model_output/prithvi-v2-300-rgb-nir-phaseF/classification_metrics_2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_BA,0.5254387259483337,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_IoU,0.3515687882900238,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_F1,0.4989114999771118,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Precision,0.5266293287277222,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Recall,0.5254387259483337,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_BA,0.5389760732650757,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_IoU,0.3508897423744201,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_F1,0.5194705128669739,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Precision,0.5393598079681396,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Recall,0.5389760732650757,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_BA,0.5808500051498413,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_IoU,0.412969022989273,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_F1,0.5807551145553589,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Precision,0.5806716084480286,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Recall,0.5808500051498413,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_BA,0.3698890805244446,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_IoU,0.1471620053052902,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_F1,0.2455050945281982,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Precision,0.364988625049591,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Recall,0.3698890805244446,model_output/prithvi-v2-300-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_BA,0.465122640132904,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_IoU,0.2130952775478363,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_F1,0.3395258486270904,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Precision,0.3887489736080169,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Recall,0.465122640132904,model_output/prithvi-v2-300-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_BA,0.4273789227008819,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_IoU,0.2631248533725738,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_F1,0.391679048538208,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Precision,0.4122977256774902,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Recall,0.4273789227008819,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_BA,0.6158943176269531,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_IoU,0.4272360205650329,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_F1,0.5670149922370911,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Precision,0.5973027944564819,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Recall,0.6158943176269531,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_BA,0.3051095008850097,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_IoU,0.1661897152662277,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_F1,0.2767930626869201,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Precision,0.3327665030956268,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Recall,0.3051095008850097,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_BA,0.3934876918792724,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_IoU,0.2382715940475464,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_F1,0.3697984218597412,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Precision,0.4563540816307068,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Recall,0.3934876918792724,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_BA,0.5854790210723877,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_IoU,0.3621453642845154,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_F1,0.5281562805175781,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Precision,0.6083487272262573,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Recall,0.5854790210723877,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_BA,0.5984808802604675,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_IoU,0.4012514352798462,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_F1,0.5725764036178589,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Precision,0.6013069152832031,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Recall,0.5984808802604675,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_BA,0.4013323187828064,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_IoU,0.1670099198818206,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_F1,0.2734430134296417,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Precision,0.3507760763168335,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Recall,0.4013323187828064,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_BA,0.4475075006484985,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_IoU,0.1979996263980865,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_F1,0.3170312047004699,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Precision,0.3888970017433166,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+Prithvi,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Recall,0.4475075006484985,model_output/prithvi-v2-300-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_BA,0.4454210102558136,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2013.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_IoU,0.2717970609664917,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2013.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_F1,0.4055702686309814,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2013.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Precision,0.4045106470584869,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2013.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Recall,0.4454210102558136,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2013.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_BA,0.6778445243835449,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_IoU,0.4961969256401062,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_F1,0.6408258080482483,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Precision,0.6485713124275208,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Recall,0.6778445243835449,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_BA,0.333621472120285,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_IoU,0.176977589726448,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_F1,0.2878259420394897,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Precision,0.3220433592796325,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Recall,0.333621472120285,model_output/dofa-base-rgb-nir-phaseF/classification_metrics_2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_BA,0.4881570935249328,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_IoU,0.3073931932449341,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_F1,0.4532395899295807,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Precision,0.4993152916431427,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Recall,0.4881570935249328,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_BA,0.5071716904640198,model_output/dofa-base-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_IoU,0.3151907324790954,model_output/dofa-base-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_F1,0.4786943793296814,model_output/dofa-base-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Precision,0.5076091289520264,model_output/dofa-base-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Recall,0.5071716904640198,model_output/dofa-base-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_BA,0.5366223454475403,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_IoU,0.3705625534057617,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_F1,0.5364569425582886,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Precision,0.5363858938217163,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Recall,0.5366223454475403,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_BA,0.3539369106292724,model_output/dofa-base-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_IoU,0.1228304058313369,model_output/dofa-base-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_F1,0.2114260643720626,model_output/dofa-base-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Precision,0.294979453086853,model_output/dofa-base-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Recall,0.3539369106292724,model_output/dofa-base-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_BA,0.4672500193119049,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_IoU,0.1989518404006958,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_F1,0.32199427485466,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Precision,0.383586436510086,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Recall,0.4672500193119049,model_output/dofa-base-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_BA,0.4861565232276916,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_IoU,0.3014053404331207,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_F1,0.4430648684501648,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Precision,0.4345161318778991,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Recall,0.4861565232276916,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_BA,0.648235559463501,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_IoU,0.4643598794937134,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_F1,0.608052670955658,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Precision,0.6153717637062073,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Recall,0.648235559463501,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_BA,0.3818588554859161,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_IoU,0.2186237871646881,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_F1,0.3511643409729004,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Precision,0.3785640597343445,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Recall,0.3818588554859161,model_output/dofa-base-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_BA,0.4955104291439056,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_IoU,0.3101426959037781,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_F1,0.4553530812263489,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Precision,0.4884352684020996,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Recall,0.4955104291439056,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_BA,0.6195859313011169,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_IoU,0.4062106013298034,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_F1,0.5763486623764038,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Precision,0.6363711357116699,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Recall,0.6195859313011169,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_BA,0.6178712844848633,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_IoU,0.4394091963768005,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_F1,0.6096267700195312,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Precision,0.6136114597320557,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Recall,0.6178712844848633,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_BA,0.438071608543396,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_IoU,0.200998306274414,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_F1,0.3216495513916015,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Precision,0.3432686924934387,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Recall,0.438071608543396,model_output/dofa-base-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_BA,0.4512939155101776,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_IoU,0.2101384103298187,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_F1,0.3299888372421264,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Precision,0.4161655604839325,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+DOFA,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Recall,0.4512939155101776,model_output/dofa-base-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_BA,0.4685361981391907,model_output/terramind-rgb-nir-phaseF/classification_metrics_2013.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_IoU,0.2896930873394012,model_output/terramind-rgb-nir-phaseF/classification_metrics_2013.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_F1,0.4264394342899322,model_output/terramind-rgb-nir-phaseF/classification_metrics_2013.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Precision,0.4257059693336487,model_output/terramind-rgb-nir-phaseF/classification_metrics_2013.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Recall,0.4685361981391907,model_output/terramind-rgb-nir-phaseF/classification_metrics_2013.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_BA,0.7280769348144531,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_IoU,0.5453178286552429,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_F1,0.6873372197151184,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Precision,0.6790300607681274,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Recall,0.7280769348144531,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_BA,0.3629049658775329,model_output/terramind-rgb-nir-phaseF/classification_metrics_2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_IoU,0.2052209973335266,model_output/terramind-rgb-nir-phaseF/classification_metrics_2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_F1,0.3240243792533874,model_output/terramind-rgb-nir-phaseF/classification_metrics_2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Precision,0.3583366572856903,model_output/terramind-rgb-nir-phaseF/classification_metrics_2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Recall,0.3629049658775329,model_output/terramind-rgb-nir-phaseF/classification_metrics_2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_BA,0.5028805136680603,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_IoU,0.3302206397056579,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_F1,0.4755508303642273,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Precision,0.52803635597229,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Recall,0.5028805136680603,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_BA,0.517327070236206,model_output/terramind-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_IoU,0.3269909024238586,model_output/terramind-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_F1,0.4925388693809509,model_output/terramind-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Precision,0.5180037021636963,model_output/terramind-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,before,macro_Recall,0.517327070236206,model_output/terramind-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_BA,0.551337480545044,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_IoU,0.3856616020202636,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_F1,0.5515139102935791,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Precision,0.5519317388534546,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-binary,after,macro_Recall,0.551337480545044,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_BA,0.3873287141323089,model_output/terramind-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_IoU,0.1408795714378357,model_output/terramind-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_F1,0.2407566010951995,model_output/terramind-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Precision,0.3611664474010467,model_output/terramind-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Recall,0.3873287141323089,model_output/terramind-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_BA,0.4865831434726715,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_IoU,0.2039838433265686,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_F1,0.3276443779468536,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Precision,0.3814388811588287,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Recall,0.4865831434726715,model_output/terramind-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_BA,0.4597694277763366,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_IoU,0.2789968848228454,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_F1,0.4117442965507507,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Precision,0.4178363084793091,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Recall,0.4597694277763366,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_BA,0.6068712472915649,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_IoU,0.4163438975811004,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_F1,0.5544347763061523,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Precision,0.5693725347518921,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Recall,0.6068712472915649,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_BA,0.3495897650718689,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_IoU,0.2004775404930114,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_F1,0.3286603987216949,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Precision,0.3676405847072601,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Recall,0.3495897650718689,model_output/terramind-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_BA,0.4105831682682037,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_IoU,0.2590431571006775,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_F1,0.3995753526687622,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Precision,0.4833833575248718,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Recall,0.4105831682682037,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_BA,0.5779733061790466,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_IoU,0.3694507479667663,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_F1,0.5382315516471863,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Precision,0.587428867816925,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Recall,0.5779733061790466,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_BA,0.571747899055481,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_IoU,0.3889455497264862,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_F1,0.5598319172859192,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Precision,0.570091724395752,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Recall,0.571747899055481,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_BA,0.4332560896873474,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_IoU,0.188439056277275,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_F1,0.3047869801521301,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Precision,0.3194588720798492,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Recall,0.4332560896873474,model_output/terramind-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_BA,0.4121053814888,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_IoU,0.1733728945255279,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_F1,0.2815063297748565,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Precision,0.3462858498096466,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+TerraMind,GFM,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Recall,0.4121053814888,model_output/terramind-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_BA,0.4758527874946594,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2013.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_IoU,0.3090927600860595,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2013.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_F1,0.4497154951095581,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2013.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Precision,0.4412886500358581,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2013.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,before,macro_Recall,0.4758527874946594,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2013.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_BA,0.672013521194458,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_IoU,0.4926825761795044,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_F1,0.6370189785957336,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Precision,0.6433200240135193,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,in-domain-seg,seg-2013,after,macro_Recall,0.672013521194458,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_BA,0.4463018774986267,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_IoU,0.2658169567584991,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_F1,0.4023475050926208,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Precision,0.4211640954017639,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,before,macro_Recall,0.4463018774986267,model_output/unet-mit-b2-rgb-nir-phaseF/classification_metrics_2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_BA,0.567696213722229,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_IoU,0.3869512379169464,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_F1,0.5269666910171509,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Precision,0.5467564463615417,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal-seg,seg-2020,after,macro_Recall,0.567696213722229,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,before,macro_BA,0.5777804255485535,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,before,macro_IoU,0.3917480111122131,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,before,macro_F1,0.5628988742828369,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,before,macro_Precision,0.5767240524291992,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,before,macro_Recall,0.5777804255485535,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_binary_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,after,macro_BA,0.6247512698173523,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,after,macro_IoU,0.4539731442928314,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,after,macro_F1,0.6222629547119141,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,after,macro_Precision,0.621826708316803,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-binary,after,macro_Recall,0.6247512698173523,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_BA,0.3718313574790954,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_IoU,0.162726029753685,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_F1,0.2625019550323486,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Precision,0.3577973246574402,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,before,macro_Recall,0.3718313574790954,model_output/unet-mit-b2-rgb-nir-phaseF/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_BA,0.4436016380786896,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_IoU,0.2182590663433075,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_F1,0.3415602445602417,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Precision,0.3928584456443786,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,F,RGB+NIR,cross-temporal,change-multiclass,after,macro_Recall,0.4436016380786896,model_output/unet-mit-b2-rgb-nir-phaseF/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_BA,0.4917129874229431,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_IoU,0.3223629593849182,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_F1,0.465968519449234,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Precision,0.4573085904121399,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,before,macro_Recall,0.4917129874229431,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2013.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_BA,0.6862111687660217,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_IoU,0.5139667391777039,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_F1,0.6555649042129517,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Precision,0.6581810712814331,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,in-domain-seg,seg-2013,after,macro_Recall,0.6862111687660217,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2013_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_BA,0.4422768354415893,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_IoU,0.2647574841976166,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_F1,0.4070426225662231,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Precision,0.4156875908374786,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,before,macro_Recall,0.4422768354415893,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/classification_metrics_2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_BA,0.5366484522819519,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_IoU,0.3587576150894165,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_F1,0.5056262016296387,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Precision,0.5447403788566589,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal-seg,seg-2020,after,macro_Recall,0.5366484522819519,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/classification_metrics_2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_BA,0.6131845116615295,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_IoU,0.4201138615608215,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_F1,0.5916489362716675,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Precision,0.6141300797462463,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,before,macro_Recall,0.6131845116615295,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_binary_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_BA,0.5922608375549316,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_IoU,0.4238597452640533,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_F1,0.5917870998382568,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Precision,0.5914855003356934,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-binary,after,macro_Recall,0.5922608375549316,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_binary_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_BA,0.4114450812339782,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_IoU,0.2068831622600555,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_F1,0.327089250087738,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Precision,0.3701125383377075,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,before,macro_Recall,0.4114450812339782,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/change_metrics_multiclass_2013-2020.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_BA,0.4411073327064514,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_IoU,0.2048048377037048,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_F1,0.3240909576416015,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Precision,0.3861165940761566,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv
+U-Net,CNN,E,RGB+NIR+nDSM,cross-temporal,change-multiclass,after,macro_Recall,0.4411073327064514,model_output/unet-mit-b2-rgb-nir-ndsm-phaseE/constraint_resolution_+_polygonfix_cc_updated/change_metrics_multiclass_2013-2020_after_postprocessing.csv

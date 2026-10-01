@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # RGB+NIR training (no nDSM), all 6 models
-# Usage: bash scripts/run_phase_f.sh
+# Usage: bash scripts/run_rgb_nir.sh
 set -euo pipefail
 
 mkdir -p logs/phase_f
@@ -11,6 +11,7 @@ configs=(
   "src/trainers/terratorch/config-dofa-base-rgb-nir.yaml"
   "src/trainers/terratorch/config-prithvi-v2-300-rgb-nir.yaml"
   "src/trainers/terratorch/config-terramind-rgb-nir.yaml"
+  "src/trainers/terratorch/config-unet-mit-b2-rgb-nir.yaml"
 )
 
 for cfg in "${configs[@]}"; do
