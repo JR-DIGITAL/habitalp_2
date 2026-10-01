@@ -1,4 +1,4 @@
-"""Shared paths and experiment registry for the SRS manuscript scripts.
+"""Shared paths and experiment registry for the MDPI manuscript scripts.
 
 Set HABITALP_DATA to a local copy of the HabitAlp 2.0 dataset, version v4
 (https://huggingface.co/datasets/JR-DIGITAL/habitalp2.0, folders labels/,
@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-OUTPUTS = REPO / "outputs" / "srs"
+OUTPUTS = REPO / "outputs" / "mdpi"
 
 
 def data_root() -> Path:
@@ -37,7 +37,7 @@ OUTLINES = "splits/outlines.gpkg"  # study area (year 2013) and test patches (ye
 # Subfolder of model_output/<experiment>/ that holds the post-processed results
 PP_DIR = "constraint_resolution_+_polygonfix_cc_updated"
 
-# Input modalities used in the SRS paper. The experiment folder names keep the
+# Input modalities used in the MDPI paper. The experiment folder names keep the
 # internal phase suffix of the inference configs (F = RGB+NIR, E = RGB+NIR+nDSM;
 # the RGB-only phase G belongs to the AGIT paper).
 MODALITIES = {"F": "RGB+NIR", "E": "RGB+NIR+nDSM"}

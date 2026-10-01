@@ -1,15 +1,15 @@
-"""Collect all SRS manuscript metrics into two tidy tables.
+"""Collect all MDPI manuscript metrics into two tidy tables.
 
 Reads the per-experiment metric CSVs written by evaluate.py and writes
-  outputs/srs/metrics_master.csv    macro metrics, one row per
+  outputs/mdpi/metrics_master.csv    macro metrics, one row per
                                     [model, phase, task, postproc, metric]
-  outputs/srs/metrics_perclass.csv  per-class IoU / F1 / precision / recall
+  outputs/mdpi/metrics_perclass.csv  per-class IoU / F1 / precision / recall
 
 Every row carries the source CSV path relative to HABITALP_DATA. The manuscript
 tables are read off these files (see paper_tables.py).
 
 Usage:
-    HABITALP_DATA=/path/to/data python scripts/srs/build_metrics_table.py
+    HABITALP_DATA=/path/to/data python scripts/mdpi/build_metrics_table.py
 """
 from __future__ import annotations
 

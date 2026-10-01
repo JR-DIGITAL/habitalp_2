@@ -1,4 +1,4 @@
-"""Segmentation and change-detection metrics for every SRS experiment.
+"""Segmentation and change-detection metrics for every experiment of the MDPI manuscript.
 
 For each experiment folder model_output/<experiment>/ this script
   1. scores the 2013 prediction on the in-domain test cells and the 2020
@@ -14,8 +14,8 @@ which are first re-rasterised onto the 0.2 m reference grid.
 Metric CSVs are written next to the predictions; build_metrics_table.py collects them.
 
 Usage:
-    HABITALP_DATA=/path/to/data python scripts/srs/evaluate.py --stage before
-    HABITALP_DATA=/path/to/data python scripts/srs/evaluate.py --stage after
+    HABITALP_DATA=/path/to/data python scripts/mdpi/evaluate.py --stage before
+    HABITALP_DATA=/path/to/data python scripts/mdpi/evaluate.py --stage after
 """
 from __future__ import annotations
 
