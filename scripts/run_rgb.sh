@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # RGB-only training (Clay v1.5, DOFA, TerraMind)
-# Usage: bash scripts/run_phase_g.sh
+# Usage: bash scripts/run_rgb.sh
 set -euo pipefail
 
 mkdir -p logs/phase_g

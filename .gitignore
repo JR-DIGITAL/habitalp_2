@@ -186,3 +186,4 @@ GITHUB_ISSUE_COMMENT.md
 checkpoints/
 *.ckpt
 wandb/
+outputs/srs/figures/
