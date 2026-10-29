@@ -1,0 +1,37 @@
+C2: 2013 train+val labels lost by the masked split and the block-drop split
+Script: scripts/c2_split_label_loss.py; per class: c2_label_loss.csv
+Grid split rebuilt from the datamodule code (grid 12, seed 0): train 70, val 15, test 15 cells (ROI-clipped grid cells = 'blocks').
+Test-cell check vs classes_v4_2013_test_cells.tif (labelled px at 0.5 m, stored / rebuilt / disagreeing): 89940828 / 89936435 / 24175
+Train+val blocks: 85; block drop removes 21 (masked split: 21 blocks touched by the patches, none removed).
+Sampling area (km2): orig 154.0, masked 138.3, blockdrop 115.1
+area = labelled px of train+val blocks inside the sampling area; reach = labelled px that
+at least one admissible 256 px patch can contain (inside block bbox and sampling area).
+
+Kept / lost share of all train+val labels:
+  area: masked lost 9.2%, block drop lost 29.4% (orig 13007 ha)
+  reach: masked lost 9.4%, block drop lost 29.5% (orig 12940 ha)
+
+Per class, % lost (area | reach), masked vs block drop:
+   1 Waterbody                              orig    71.0 ha  masked  10.1 |  11.0  block drop  33.1 |  34.7
+   2 Gravel bank, shoal, fluviatile         orig    11.9 ha  masked   9.1 |   9.5  block drop  16.8 |  17.6
+   3 Erosion area, gully                    orig   403.5 ha  masked   7.8 |   8.0  block drop  26.0 |  26.0
+   4 Debris-covered areas                   orig   521.9 ha  masked   4.4 |   4.5  block drop  18.7 |  18.8
+   5 Rock                                   orig  2470.7 ha  masked   3.0 |   3.1  block drop  15.5 |  15.6
+   6 Young conif. (growth, thicket)         orig   356.0 ha  masked  18.7 |  19.0  block drop  41.8 |  42.1
+   7 Young broadl. (growth, thicket)        orig   134.9 ha  masked  26.0 |  27.0  block drop  69.3 |  69.7
+   8 Conif. pole timber CC<80               orig   207.1 ha  masked  17.1 |  17.6  block drop  40.7 |  40.8
+   9 Conif. pole timber CC>=80              orig   621.6 ha  masked  17.5 |  18.2  block drop  41.9 |  42.5
+  10 Broadl. pole timber                    orig   128.4 ha  masked  20.4 |  20.7  block drop  41.8 |  42.1
+  11 Conif. mature forest CC<80             orig   887.0 ha  masked  10.0 |  10.2  block drop  36.7 |  36.9
+  12 Conif. mature forest CC>=80            orig  1332.2 ha  masked  13.7 |  14.0  block drop  41.1 |  41.4
+  13 Broadl. mature forest CC<80            orig    80.2 ha  masked  27.0 |  27.1  block drop  59.7 |  59.6
+  14 Broadl. mature forest CC>=80           orig   416.3 ha  masked  23.9 |  24.5  block drop  47.2 |  47.7
+  15 Old conif. forest, multilayered CC<80  orig   773.1 ha  masked   8.3 |   8.4  block drop  28.5 |  28.7
+  16 Old conif. forest, multilayered CC>=80 orig   577.1 ha  masked   9.4 |   9.6  block drop  27.8 |  28.1
+  17 Old broadl. forest, multilayered CC<80 orig    66.4 ha  masked   6.9 |   7.1  block drop  33.9 |  34.6
+  18 Old broadl. forest, multilayered CC>=80 orig   348.4 ha  masked  12.1 |  12.4  block drop  35.5 |  35.7
+  19 Clearcut areas                         orig   181.9 ha  masked  36.0 |  36.6  block drop  60.9 |  61.5
+  20 Mountain dwarf forest                  orig  2018.8 ha  masked   3.5 |   3.6  block drop  19.3 |  19.3
+  21 Grassland, buffer strip                orig   373.8 ha  masked  11.3 |  12.1  block drop  44.2 |  44.6
+  22 Alpine grassland, heath                orig   925.5 ha  masked   2.9 |   2.9  block drop  22.7 |  22.8
+  23 Low importance or small extent         orig    99.6 ha  masked  25.2 |  25.6  block drop  50.7 |  51.1

@@ -313,3 +313,45 @@ class RandomGeoSamplerWithinArea(RandomGeoSampler):
                 raise RuntimeError(
                     f"Could not find patch in labeled cell area after 100 iterations."
                 )
+
+
+class RandomGeoSamplerWithinRoi(RandomGeoSampler):
+    """Updated RandomGeoSampler from torchgeo with support for ROI Polygon check.
+    """
+
+    def __iter__(self) -> Iterator[tuple[slice, slice, slice]]:
+        """Return the index of a dataset.
+
+        Yields:
+            [xmin:xmax, ymin:ymax, tmin:tmax] coordinates to index a dataset.
+        """
+        for _ in range(len(self)):
+            search_count = 0
+            found_cell = False
+            while (search_count < 100) and not found_cell:
+                search_count += 1
+                # Choose a random tile, weighted by area
+                idx = torch.multinomial(self.areas, 1)
+                bounds = self.bounds[idx]
+                interval = self.intervals[idx]
+
+                # Choose a random index within that tile
+                bounding_box = get_random_bounding_box(
+                    bounds, self.size, self.res, self.generator
+                )
+
+                if self.roi.contains(
+                    box(
+                        bounding_box[0].start,
+                        bounding_box[1].start,
+                        bounding_box[0].stop,
+                        bounding_box[1].stop,
+                    )
+                ):
+                    found_cell = True
+
+                    yield *bounding_box, slice(interval.left, interval.right)
+            if not found_cell:
+                raise RuntimeError(
+                    f"Could not find patch in labeled cell area after 100 iterations."
+                )

@@ -11,7 +11,7 @@ import torch
 import wandb
 from lightning import LightningDataModule
 from lightning.pytorch import Trainer
-from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, RichProgressBar
+from lightning.pytorch.callbacks import EarlyStopping, LearningRateMonitor, ModelCheckpoint, RichProgressBar
 from lightning.pytorch.loggers import WandbLogger
 
 
@@ -502,6 +502,11 @@ def setup_training(
     monitor_metric: str = "val_jaccard",
     save_model_locally: bool = True,
     log_model: str = "all",
+    wandb_tags: list[str] | None = None,
+    wandb_group: str | None = None,
+    wandb_config: dict | None = None,
+    early_stopping: bool = True,
+    wandb_run_id: str | None = None,
 ) -> Trainer:
     """
     Set up PyTorch Lightning training configuration including callbacks and logging.
@@ -518,6 +523,11 @@ def setup_training(
         monitor_metric: Metric to monitor for checkpoints and early stopping (default: "val_jaccard")
         save_model_locally: Whether to save model checkpoints locally (default: True)
         log_model: Log checkpoints created by ModelCheckpoint as W&B artifacts
+        wandb_tags: Tags of the W&B run (default: None)
+        wandb_group: Group of the W&B run (default: None)
+        wandb_config: Extra values stored in the W&B run config, e.g. seed and split (default: None)
+        early_stopping: Stop when the monitored metric has not improved for `patience` epochs (default: True)
+        wandb_run_id: Continue this W&B run, e.g. when resuming from a checkpoint (default: None)
 
     Returns:
         trainer: Configured PyTorch Lightning trainer
@@ -539,6 +549,16 @@ def setup_training(
         verbose=True,
     )
 
+    # save_last only refreshes last.ckpt when a new best checkpoint is written, so last.ckpt holds
+    # the best epoch; latest.ckpt is written after every epoch and is the one to resume from
+    latest_callback = ModelCheckpoint(
+        dirpath=experiment_dir,
+        filename="latest",
+        monitor=None,
+        save_top_k=1 if save_model_locally else 0,
+        enable_version_counter=False,
+    )
+
     early_stopping_callback = EarlyStopping(
         monitor=monitor_metric,
         mode="max",
@@ -556,15 +576,24 @@ def setup_training(
             save_dir="logs_dir",
             project=wandb_project,
             log_model=log_model,
+            tags=wandb_tags,
+            group=wandb_group,
+            config=wandb_config,
         )
     elif logging == "remote":
-        if wandb_key is None:
-            raise ValueError("wandb_key is required for remote logging")
-        wandb.login(key=wandb_key)
+        # without an explicit key, use WANDB_API_KEY or the stored login (`wandb login`, ~/.netrc)
+        if wandb_key is not None:
+            wandb.login(key=wandb_key)
+        elif not wandb.login():
+            raise ValueError("No W&B credentials: run `wandb login` once or set WANDB_API_KEY")
         wb_logger = _FilteredWandbLogger(
             name=experiment_name,
             project=wandb_project,
             log_model=log_model,
+            tags=wandb_tags,
+            group=wandb_group,
+            config=wandb_config,
+            **({"id": wandb_run_id, "resume": "must"} if wandb_run_id else {}),
         )
     else:
         raise ValueError("logging must be either 'local' or 'remote'")
@@ -573,7 +602,9 @@ def setup_training(
 
     # Initialize trainer
     trainer = Trainer(
-        callbacks=[checkpoint_callback, early_stopping_callback, RichProgressBar()],
+        callbacks=[checkpoint_callback, latest_callback]
+        + ([early_stopping_callback] if early_stopping else [])
+        + [LearningRateMonitor("epoch"), RichProgressBar()],
         logger=[wb_logger],
         default_root_dir=experiment_dir,
         min_epochs=min_epochs,
@@ -1597,7 +1628,9 @@ def get_change_array(
     pole_wood = np.array([8, 9, 10])
     mature_forest = np.array([11, 12, 13, 14])
     old_forest = np.array([15, 16, 17, 18])
-    non_forest_shrubland = np.array([20, 21, 22])
+    # 20 (mountain dwarf forest) is its own group: dwarf forest <-> forest stages
+    # is not caught by any rule below and stays 8: Other Transition
+    non_forest_shrubland = np.array([21, 22])
     all_forest_stages = [young_growth, pole_wood, mature_forest, old_forest]
 
     from_class_forest_stage = np.zeros(from_array.shape, dtype=np.uint8)
@@ -1671,7 +1704,7 @@ def get_change_array(
     density_gain = None
     density_loss_or_gain = None
 
-    # --- 5. Non-Forest / Shrubland to Forest (if not caught above) ---
+    # --- 5. Non-Forest / Shrubland to Forest (if not caught above, not dwarf forest) ---
     change_map = np.where(
         np.isin(from_array, non_forest_shrubland)
         & np.isin(to_array, np.concatenate(all_forest_stages)),

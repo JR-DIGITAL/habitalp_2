@@ -238,7 +238,7 @@ Examples:
     device = torch.device("cpu") if args.cpu else torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"\nDevice: {device}")
 
-    if model_type in ["clay", "clay_v1_5", "dofa", "prithvi", "terramind", "unet_terratorch"]:
+    if model_type in ["terratorch", "clay", "clay_v1_5", "dofa", "prithvi", "terramind", "unet_terratorch"]:
         task = load_terratorch_model(checkpoint_path, device)
     elif model_type == "unet":
         task = load_unet_model(checkpoint_path, device)

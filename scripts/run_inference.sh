@@ -4,7 +4,8 @@
 # Run inside tmux: bash scripts/run_phase_g_inference.sh
 set -euo pipefail
 
-REPO=/home/hkristen/habitalp2
+REPO=$(cd "$(dirname "$0")/.." && pwd)
+PY=${PY:-$REPO/.venv314/bin/python}
 CONFIGS=$REPO/src/inference/configs
 
 run() {
@@ -12,7 +13,7 @@ run() {
     local experiment=$2
     local year=$3
     echo "====== ${experiment} (${year}) ======"
-    conda run --no-capture-output -n habitalp2 python "$REPO/src/inference/inference.py" \
+    "$PY" "$REPO/src/inference/inference.py" \
         --config "$CONFIGS/$config" \
         --output "${year}_${experiment}"
     echo "====== Done: ${experiment} (${year}) ======"

@@ -1,0 +1,15 @@
+uncollapsed_px_differing_from_reference: 0
+reference change area (classes 1-8): 475.9 ha
+LiDAR-threshold classes 1, 2, 3, 5: 148.5 ha (31.2% of change)
+setback (3): 22.53 ha, of which 21.82 ha CC-only (to no change), 0.72 ha true stage regression (to other transition)
+collapsed reference change area: 328.3 ha
+ class                       name  area_ha  to_no_change_ha  to_other_transition_ha  kept_same_ha
+     0                  No change   683.12           683.12                    0.00        683.12
+     1   Mature Tree Density Loss    86.62            86.62                    0.00          0.00
+     2    Old Growth Density Loss    32.95            32.79                    0.17          0.00
+     3   Forest Setback YoungLoss    22.53            21.82                    0.72          0.00
+     4   Forest Stage Progression   264.15             0.00                    0.00        264.15
+     5        Forest Density Gain     6.42             6.42                    0.00          0.00
+     6 Early Forest Establishment     8.91             0.00                    0.00          8.91
+     7              Clearcut Loss    17.90             0.00                    0.00         17.90
+     8           Other Transition    36.42             0.00                   36.42         36.42

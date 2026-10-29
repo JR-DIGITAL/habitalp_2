@@ -1,0 +1,14 @@
+tiles per map: 88 (all 24 maps); per-tile class support identical across maps: False (edge tiles only; the minimum is used)
+B0 draws (seed 0, 1000): share with >= 1 class absent from the reference: 0.000
+fixed class set: 1000 draws for 1000 accepted, redraw rate 0.000
+multi-class CI bounds, fixed vs B0: max |diff| low 0.0000, high 0.0000
+ class                       name  ref_area_ha  tiles_with_class  n_tiles  dropout_rate_b0_draws  dropout_rate_expected  absent_scored_0_min  absent_scored_0_max  absent_dropped_nan_min  absent_dropped_nan_max
+     0                  No change     683.1187                85       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     1   Mature Tree Density Loss      86.6204                61       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     2    Old Growth Density Loss      32.9542                41       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     3   Forest Setback YoungLoss      22.5331                37       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     4   Forest Stage Progression     264.1512                65       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     5        Forest Density Gain       6.4229                24       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     6 Early Forest Establishment       8.9148                15       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     7              Clearcut Loss      17.9049                32       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0
+     8           Other Transition      36.4154                34       88                    0.0                    0.0                  0.0                  0.0                     0.0                     0.0

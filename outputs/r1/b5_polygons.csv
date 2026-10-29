@@ -1,0 +1,69 @@
+model,experiment,kind,class,n_patches,share_touched,share_ge50,share_removed_all,area_share,share_correct_ge50
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,filter_all_rules,any change,225,0.3288888888888889,0.13777777777777778,0.05333333333333334,0.253794317878508,
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,filter_rule3,any change,225,0.23555555555555555,0.11555555555555555,0.044444444444444446,0.21906129626238174,
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Mature Tree Density Loss,100,1.0,0.95,,0.873708669712622,0.13
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Mature Tree Density Loss,100,1.0,0.48,,0.6382969680443271,0.13
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Mature Tree Density Loss,100,1.0,0.46,,0.6301503058822792,0.13
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Mature Tree Density Loss,100,0.65,0.34,,0.45842244237794577,0.15
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Old Growth Density Loss,52,1.0,1.0,,0.9652445108660782,0.09615384615384616
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Old Growth Density Loss,52,1.0,0.3269230769230769,,0.5531556144951875,0.09615384615384616
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Old Growth Density Loss,52,1.0,0.3076923076923077,,0.5480350385707845,0.09615384615384616
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Old Growth Density Loss,52,0.6346153846153846,0.3076923076923077,,0.3126762968602315,0.1346153846153846
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Forest Setback YoungLoss,39,1.0,0.717948717948718,,0.7059604921431747,0.28205128205128205
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Forest Setback YoungLoss,39,1.0,0.5897435897435898,,0.622345085718402,0.20512820512820512
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Forest Setback YoungLoss,39,1.0,0.5897435897435898,,0.6212145459939116,0.20512820512820512
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Forest Setback YoungLoss,39,0.6666666666666666,0.46153846153846156,,0.4200396859895753,0.05128205128205128
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Forest Stage Progression,193,0.9948186528497409,0.6994818652849741,,0.6744616877990959,0.3471502590673575
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Forest Stage Progression,193,0.9896373056994818,0.6424870466321243,,0.6241086849456018,0.3471502590673575
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Forest Stage Progression,193,0.9896373056994818,0.6321243523316062,,0.6120101190717419,0.3471502590673575
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Forest Stage Progression,193,0.8186528497409327,0.5699481865284974,,0.5356664361706819,0.35751295336787564
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Forest Density Gain,19,1.0,0.7894736842105263,,0.5382038473404239,0.3157894736842105
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Forest Density Gain,19,1.0,0.5263157894736842,,0.3596362695818284,0.3157894736842105
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Forest Density Gain,19,1.0,0.5263157894736842,,0.35863906487128266,0.3157894736842105
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Forest Density Gain,19,0.9473684210526315,0.9473684210526315,,0.997708298924577,0.7894736842105263
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Early Forest Establishment,18,1.0,0.7222222222222222,,0.7302800932493713,0.6666666666666666
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Early Forest Establishment,18,1.0,0.7222222222222222,,0.7302800932493713,0.6666666666666666
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Early Forest Establishment,18,1.0,0.7222222222222222,,0.7156902690130511,0.6666666666666666
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Early Forest Establishment,18,0.8888888888888888,0.6666666666666666,,0.6579490785999327,0.6111111111111112
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Clearcut Loss,44,0.9772727272727273,0.8636363636363636,,0.8380285116310833,0.38636363636363635
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Clearcut Loss,44,0.9772727272727273,0.7727272727272727,,0.7573645822500166,0.38636363636363635
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Clearcut Loss,44,0.9772727272727273,0.7727272727272727,,0.7517142998698011,0.38636363636363635
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Clearcut Loss,44,0.8409090909090909,0.7954545454545454,,0.8398828522700441,0.3409090909090909
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_raw,Other Transition,48,1.0,0.75,,0.617733185042074,0.625
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_rule3,Other Transition,48,1.0,0.7291666666666666,,0.60648008219673,0.625
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_all_rules,Other Transition,48,1.0,0.6875,,0.5691825038263578,0.5833333333333334
+MiT-B2 U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,reference_polygon,Other Transition,48,0.7083333333333334,0.6041666666666666,,0.5176013559563107,0.5
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,filter_all_rules,any change,244,0.36885245901639346,0.11065573770491803,0.06147540983606557,0.13816237826342104,
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,filter_rule3,any change,244,0.23770491803278687,0.0778688524590164,0.05327868852459016,0.09639124183037948,
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Mature Tree Density Loss,100,1.0,0.92,,0.8818523322822915,0.08
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Mature Tree Density Loss,100,1.0,0.8,,0.8006841470296814,0.08
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Mature Tree Density Loss,100,1.0,0.79,,0.7959354692615387,0.08
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Mature Tree Density Loss,100,0.78,0.65,,0.658714824183969,0.07
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Old Growth Density Loss,52,1.0,0.9615384615384616,,0.9196973524831076,0.38461538461538464
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Old Growth Density Loss,52,0.9807692307692307,0.6730769230769231,,0.7591660419424155,0.38461538461538464
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Old Growth Density Loss,52,0.9807692307692307,0.6730769230769231,,0.7571067260272959,0.38461538461538464
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Old Growth Density Loss,52,0.6346153846153846,0.4230769230769231,,0.37308803148003794,0.1346153846153846
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Forest Setback YoungLoss,39,1.0,0.9487179487179487,,0.8983713627829587,0.46153846153846156
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Forest Setback YoungLoss,39,1.0,0.8717948717948718,,0.8426291187432202,0.38461538461538464
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Forest Setback YoungLoss,39,1.0,0.8717948717948718,,0.8417352613778746,0.38461538461538464
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Forest Setback YoungLoss,39,0.7948717948717948,0.6153846153846154,,0.49139214292633787,0.10256410256410256
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Forest Stage Progression,193,1.0,0.8341968911917098,,0.8232167954287096,0.538860103626943
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Forest Stage Progression,193,1.0,0.8238341968911918,,0.8019968997026908,0.538860103626943
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Forest Stage Progression,193,1.0,0.7927461139896373,,0.7825215244175756,0.538860103626943
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Forest Stage Progression,193,0.8911917098445595,0.7512953367875648,,0.753463025559247,0.5544041450777202
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Forest Density Gain,19,1.0,0.7894736842105263,,0.6500378626163535,0.21052631578947367
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Forest Density Gain,19,1.0,0.7368421052631579,,0.5465597995618532,0.21052631578947367
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Forest Density Gain,19,1.0,0.7368421052631579,,0.5443578469103794,0.21052631578947367
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Forest Density Gain,19,1.0,1.0,,0.9991411574430424,0.5789473684210527
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Early Forest Establishment,18,1.0,0.8888888888888888,,0.775923607590653,0.7222222222222222
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Early Forest Establishment,18,1.0,0.8888888888888888,,0.775923607590653,0.7222222222222222
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Early Forest Establishment,18,1.0,0.8888888888888888,,0.7635435478239199,0.7222222222222222
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Early Forest Establishment,18,0.8888888888888888,0.7222222222222222,,0.7275705544626261,0.7222222222222222
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Clearcut Loss,44,0.9772727272727273,0.9545454545454546,,0.9342058338194775,0.5681818181818182
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Clearcut Loss,44,0.9772727272727273,0.9090909090909091,,0.8903169451785581,0.5681818181818182
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Clearcut Loss,44,0.9772727272727273,0.9090909090909091,,0.881647584670546,0.5681818181818182
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Clearcut Loss,44,0.9318181818181818,0.9090909090909091,,0.919073173366232,0.5909090909090909
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_raw,Other Transition,48,0.9791666666666666,0.7916666666666666,,0.5637115748176156,0.6875
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_rule3,Other Transition,48,0.9791666666666666,0.7916666666666666,,0.5551807667378053,0.6875
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_all_rules,Other Transition,48,0.9583333333333334,0.6875,,0.5151501383151822,0.5625
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,reference_polygon,Other Transition,48,0.7291666666666666,0.5416666666666666,,0.43789699903356066,0.4583333333333333

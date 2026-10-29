@@ -187,3 +187,4 @@ checkpoints/
 *.ckpt
 wandb/
 outputs/mdpi/figures/
+.venv*/

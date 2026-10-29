@@ -1,0 +1,54 @@
+B9: revision runs, test-set metrics aggregated over seeds
+Script: scripts/b9_seed_aggregate.py; per run: b9_per_run.csv; aggregated: b9_summary.csv; tile CMs: b9_tile_cms.npz
+
+Reproduction check on unet-mit-b2-rgb-nir-ndsm-phaseE:
+  seg2020 mIoU: b9 0.264757 stored 0.264757 diff -3.7e-09
+  seg2020 BA: b9 0.442277 stored 0.442277 diff -4.2e-09
+  seg2020 F1: b9 0.407043 stored 0.407043 diff -3.0e-09
+  seg2013 mIoU: b9 0.322363 stored 0.322363 diff +2.9e-09
+  seg2013 BA: b9 0.491713 stored 0.491713 diff +4.6e-08
+  seg2013 F1: b9 0.465969 stored 0.465969 diff +2.1e-08
+  cd_mc IoU: b9 0.211606 B0 0.211606 diff -6.4e-09
+  cd_mc F1: b9 0.333523 B0 0.333523 diff +7.3e-09
+  cd_mc BA: b9 0.411445 B0 0.411445 diff -6.7e-09
+  cd_bin IoU: b9 0.420114 B0 0.420114 diff +2.9e-08
+  cd_bin F1: b9 0.591649 B0 0.591649 diff +3.9e-08
+  cd_bin BA: b9 0.613185 B0 0.613185 diff -5.2e-09
+  cd tile CMs equal to b2_tile_cms.npz: True (88 tiles)
+
+Tile alignment (88-tile 500 m grid of B0/B2):
+  57 of 57 rasters give the same 88 non-empty cd tiles of the 17 x 19 grid as B2; reference window offset [(0, 21)] for all, seg2020 grid starts at the same reference pixel
+  max |reference pixels per tile and class - B2| over all maps: 0 px
+  seg2020 pixels outside the 88 tiles: max 0 px
+
+Headline (best val checkpoint unless stated; mean ± SD over seeds, SD with ddof 1):
+model | split | n | 2020 mIoU (per seed) | 2020 BA | 2013 mIoU | CD multi IoU | CD binary IoU | 2020 mIoU last epoch (n) | best - last
+Clay v1.0 | masked | 3 | 0.249 ± 0.003 (0.2518;0.2498;0.2466) | 0.412 ± 0.004 | 0.329 ± 0.003 | 0.233 ± 0.003 | 0.425 ± 0.007 | 0.251 ± 0.001 (3) | -0.001 ± 0.002
+Clay v1.5 | masked | 3 | 0.210 ± 0.006 (0.2037;0.2162;0.2088) | 0.351 ± 0.008 | 0.311 ± 0.002 | 0.209 ± 0.005 | 0.386 ± 0.011 | 0.207 ± 0.005 (3) | 0.003 ± 0.003
+MiT-B2 U-Net | blockdrop | 3 | 0.215 ± 0.006 (0.2193;0.2163;0.2081) | 0.382 ± 0.006 | 0.312 ± 0.001 | 0.203 ± 0.012 | 0.378 ± 0.006 | 0.210 ± 0.004 (2) | 0.002 ± 0.001
+MiT-B2 U-Net | masked | 3 | 0.226 ± 0.015 (0.2140;0.2222;0.2425) | 0.400 ± 0.020 | 0.312 ± 0.009 | 0.209 ± 0.018 | 0.389 ± 0.020 | 0.232 ± 0.003 (3) | -0.005 ± 0.014
+MiT-B2 U-Net | orig | 3 | 0.228 ± 0.002 (0.2283;0.2254;0.2290) | 0.399 ± 0.005 | 0.313 ± 0.005 | 0.183 ± 0.012 | 0.385 ± 0.010 | 0.234 ± 0.007 (2) | -0.007 ± 0.010
+ResNet-50 U-Net | masked | 3 | 0.157 ± 0.014 (0.1414;0.1617;0.1687) | 0.283 ± 0.027 | 0.285 ± 0.010 | 0.164 ± 0.014 | 0.344 ± 0.017 | 0.156 ± 0.014 (3) | 0.001 ± 0.004
+Prithvi | masked | 3 | 0.216 ± 0.013 (0.2298;0.2053;0.2127) | 0.358 ± 0.008 | 0.304 ± 0.013 | 0.204 ± 0.009 | 0.394 ± 0.012 | 0.215 ± 0.004 (2) | -0.006 ± 0.001
+DOFA | masked | 3 | 0.201 ± 0.004 (0.1972;0.2054;0.2007) | 0.354 ± 0.008 | 0.294 ± 0.003 | 0.210 ± 0.013 | 0.395 ± 0.009 | 0.202 ± 0.005 (3) | -0.001 ± 0.002
+TerraMind | masked | 3 | 0.208 ± 0.003 (0.2101;0.2088;0.2046) | 0.349 ± 0.009 | 0.306 ± 0.005 | 0.204 ± 0.005 | 0.388 ± 0.007 | 0.208 ± 0.001 (3) | 0.000 ± 0.002
+Clay v1.0 + U-Net dec | masked | 1 | 0.224 (0.2238) | 0.383 | 0.321 | 0.227 | 0.408 | 0.215 (1) | 0.009
+Prithvi + U-Net dec | masked | 1 | 0.202 (0.2016) | 0.334 | 0.313 | 0.221 | 0.396 | 0.203 (1) | -0.002
+TerraMind LR 5e-5 | masked | 1 | 0.219 (0.2186) | 0.374 | 0.308 | 0.214 | 0.400 | 0.213 (1) | 0.005
+
+MiT-B2 U-Net by training split (masked = T3, original = K2, block drop = K1); mean ± SD (per seed):
+  seg2020_mIoU: masked 0.226 ± 0.015 (0.2140;0.2222;0.2425); orig 0.228 ± 0.002 (0.2283;0.2254;0.2290); blockdrop 0.215 ± 0.006 (0.2193;0.2163;0.2081)
+  seg2020_BA: masked 0.400 ± 0.020 (0.3871;0.3906;0.4231); orig 0.399 ± 0.005 (0.3949;0.4042;0.3989); blockdrop 0.382 ± 0.006 (0.3848;0.3858;0.3757)
+  seg2013_mIoU: masked 0.312 ± 0.009 (0.3014;0.3193;0.3140); orig 0.313 ± 0.005 (0.3176;0.3071;0.3146); blockdrop 0.312 ± 0.001 (0.3116;0.3108;0.3127)
+  cd_mc_IoU: masked 0.209 ± 0.018 (0.1935;0.2061;0.2287); orig 0.183 ± 0.012 (0.1796;0.1736;0.1965); blockdrop 0.203 ± 0.012 (0.2145;0.2045;0.1914)
+  cd_bin_IoU: masked 0.389 ± 0.020 (0.3717;0.3841;0.4105); orig 0.385 ± 0.010 (0.3896;0.3734;0.3916); blockdrop 0.378 ± 0.006 (0.3826;0.3792;0.3717)
+
+Post-processed CD: not computed (needs the IMPACT polygon step).
+
+Context, paper Phase E runs (original split, old protocol, one unseeded run), 2020 mIoU / CD multi / CD binary:
+  Clay v1.0 0.252 / 0.240 / 0.431; Clay v1.5 0.219 / 0.207 / 0.396; Prithvi 0.166 / 0.173 / 0.362;
+  DOFA 0.219 / 0.207 / 0.406; TerraMind 0.200 / 0.196 / 0.369; MiT-B2 U-Net 0.265 / 0.212 / 0.420.
+  MiT-B2 U-Net on the original split with the new protocol (K2) gives 0.228, so its drop from the
+  paper value comes from the protocol (batch size 4, fixed 200 epochs, seed), not from the masked split.
+
+Last-epoch rasters are missing for T5-s0, K1-s0, K2-s0 (no latest.ckpt), so best - last uses n = 2 there.

@@ -1,0 +1,553 @@
+model,experiment,phase,year,class,name,group,IoU,recall,ref_px
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,1,Waterbody,other,0.20072615118495668,0.41503975617464556,2556584
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,2,"Gravel bank, shoal, fluviatile",other,0.1521331886782807,0.2996849096800759,446856
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,3,"Erosion area, gully",other,0.33769767848859117,0.5415309528587601,6527830
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,4,Debris-covered areas,other,0.32614013538448217,0.5858051852324133,5144456
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,5,Rock,other,0.3265512822223208,0.42219368343734215,8522515
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,6,"Young conif. (growth, thicket)",other,0.163804220274485,0.3183055559858119,6197856
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,7,"Young broadl. (growth, thicket)",other,0.36298795360355607,0.743469350738606,11710168
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,8,Conif. pole timber CC<80,cc_split,0.31399027653858647,0.5022159347447875,16872338
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,9,Conif. pole timber CC>=80,cc_split,0.2501289928036529,0.3881980744127477,13052226
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,10,Broadl. pole timber,other,0.1556341513633424,0.23955256162008576,11283699
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,11,Conif. mature forest CC<80,cc_split,0.20277736043273278,0.23974718237021025,34458040
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,12,Conif. mature forest CC>=80,cc_split,0.26311553685367034,0.3920928848995935,26473625
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,13,Broadl. mature forest CC<80,cc_split,0.05058507201428231,0.06438391884476423,7528091
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,14,Broadl. mature forest CC>=80,cc_split,0.07195993656210851,0.089125814421832,17921149
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.3099591217635897,0.42930586712022234,29168637
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.12959692247598853,0.2318744173399627,12563072
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.13581963698612187,0.32359658068073544,7767511
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.2869118486860152,0.6567297366285337,19212104
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,19,Clearcut areas,other,0.31353000278412163,0.6015944059605266,16044220
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,20,Mountain dwarf forest,other,0.4735672726694896,0.5518198349684414,11827556
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,21,"Grassland, buffer strip",other,0.27324019472775435,0.37294682442288857,17945494
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,22,"Alpine grassland, heath",other,0.28726274343733166,0.6697484742895972,5704228
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2020,23,Low importance or small extent,other,0.4047162313099096,0.7430661064394722,7578354
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,1,Waterbody,other,0.48071620061970394,0.6717115494738292,2556584
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,2,"Gravel bank, shoal, fluviatile",other,0.27394422187611084,0.7140085396637843,446856
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,3,"Erosion area, gully",other,0.3662608879657852,0.637418665980378,6527865
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,4,Debris-covered areas,other,0.3937054752073272,0.5744722085289484,5144456
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,5,Rock,other,0.4961826677944413,0.5878250727631457,8522515
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,6,"Young conif. (growth, thicket)",other,0.15363712543362343,0.3929628245638492,6197856
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,7,"Young broadl. (growth, thicket)",other,0.3587116199734908,0.7279461746407054,11710168
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,8,Conif. pole timber CC<80,cc_split,0.1387081517699711,0.21350828794444493,16872338
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,9,Conif. pole timber CC>=80,cc_split,0.23342727869765817,0.6627880945365181,13052226
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,10,Broadl. pole timber,other,0.1906974522898794,0.417572818984271,11283699
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,11,Conif. mature forest CC<80,cc_split,0.11941399942223228,0.15015563856795106,34458040
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,12,Conif. mature forest CC>=80,cc_split,0.1621898287432212,0.31978827984456226,26473625
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,13,Broadl. mature forest CC<80,cc_split,0.09658734609826063,0.19173160898294137,7528091
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,14,Broadl. mature forest CC>=80,cc_split,0.2162466410093605,0.41691539978826136,17921149
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.16383639881500436,0.19204167819017393,29168637
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.13349684357437167,0.22162055586404344,12563072
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.03497738684210155,0.04143270604959555,7767511
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.3069521464801624,0.47130407996958584,19212104
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,19,Clearcut areas,other,0.32517321813632416,0.4613372915604498,16044220
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,20,Mountain dwarf forest,other,0.5137120643754135,0.5488203987366451,11827556
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,21,"Grassland, buffer strip",other,0.2927455144875219,0.34909002783651427,17945494
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,22,"Alpine grassland, heath",other,0.25492125839491026,0.5773214184285761,5704228
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2020,23,Low importance or small extent,other,0.47951735348626745,0.7534327375047405,7578354
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,1,Waterbody,other,0.2306968057306238,0.35221412634984806,2556584
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,2,"Gravel bank, shoal, fluviatile",other,0.1942822849929195,0.2658820738671966,446856
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,3,"Erosion area, gully",other,0.2718939359299749,0.4882565875643208,6527830
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,4,Debris-covered areas,other,0.3154286327553907,0.4661903999178922,5144456
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,5,Rock,other,0.22311343488515137,0.246987538302954,8522515
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,6,"Young conif. (growth, thicket)",other,0.11936139825170713,0.2738390501489547,6197856
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,7,"Young broadl. (growth, thicket)",other,0.28387259574759627,0.6588252192453601,11710168
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,8,Conif. pole timber CC<80,cc_split,0.2273109103618211,0.4109747564326888,16872338
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,9,Conif. pole timber CC>=80,cc_split,0.2107341930105247,0.35897447684402645,13052226
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,10,Broadl. pole timber,other,0.16165900694720722,0.30296501173950136,11283699
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,11,Conif. mature forest CC<80,cc_split,0.20894869160553362,0.2773930554378601,34458040
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,12,Conif. mature forest CC>=80,cc_split,0.22695848305383787,0.3050004296729292,26473625
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,13,Broadl. mature forest CC<80,cc_split,0.05315531634078517,0.10035293144038775,7528091
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,14,Broadl. mature forest CC>=80,cc_split,0.09024801058915503,0.12958973780085195,17921149
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.24466458754537607,0.3237712135812174,29168637
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.08058746751161965,0.14417349514513647,12563072
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.09426915474700745,0.16768550440417787,7767511
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.2887708110395763,0.7527834015472745,19212104
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,19,Clearcut areas,other,0.29277980951633914,0.5313576478008903,16044220
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,20,Mountain dwarf forest,other,0.3675362256045213,0.4503893281080216,11827556
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,21,"Grassland, buffer strip",other,0.2690684350683126,0.3840554626136232,17945494
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,22,"Alpine grassland, heath",other,0.1948896068136397,0.37633926974868465,5704228
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2020,23,Low importance or small extent,other,0.3871316181160961,0.5225381395485088,7578354
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,1,Waterbody,other,0.3669972418092868,0.6783015930632438,2556584
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,2,"Gravel bank, shoal, fluviatile",other,0.235208251095476,0.5827112089800741,446856
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,3,"Erosion area, gully",other,0.2896616691460377,0.5595472639216651,6527865
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,4,Debris-covered areas,other,0.3465132077034968,0.47802197161371385,5144456
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,5,Rock,other,0.39003506072726735,0.48402343674373116,8522515
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,6,"Young conif. (growth, thicket)",other,0.15146496883742772,0.35471798634882773,6197856
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,7,"Young broadl. (growth, thicket)",other,0.29709860578558495,0.7149625863608446,11710168
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,8,Conif. pole timber CC<80,cc_split,0.1051136296018829,0.11778616573470731,16872338
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,9,Conif. pole timber CC>=80,cc_split,0.23650758208399708,0.4774957926716868,13052226
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,10,Broadl. pole timber,other,0.1709252685912772,0.34439654939395314,11283699
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,11,Conif. mature forest CC<80,cc_split,0.06901393056373946,0.07947242501314643,34458040
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,12,Conif. mature forest CC>=80,cc_split,0.21583390135060107,0.40762710055763046,26473625
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,13,Broadl. mature forest CC<80,cc_split,0.04554092372922907,0.08167940584140122,7528091
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,14,Broadl. mature forest CC>=80,cc_split,0.182462936031704,0.3198044388783331,17921149
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.1357101006638385,0.15876946872766115,29168637
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.09338293817449202,0.2032742469357813,12563072
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.03972639037260968,0.05058995088645513,7767511
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.288249192499202,0.624963356434048,19212104
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,19,Clearcut areas,other,0.293161743532299,0.5734290604342249,16044220
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,20,Mountain dwarf forest,other,0.4422993764988619,0.47079472716087756,11827556
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,21,"Grassland, buffer strip",other,0.2520144925437768,0.3462483116931749,17945494
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,22,"Alpine grassland, heath",other,0.2503068021071762,0.660462029217626,5704228
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2020,23,Low importance or small extent,other,0.4655766683035654,0.6624288070998003,7578354
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,1,Waterbody,other,0.23721549644707166,0.28426603624211055,2556584
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,2,"Gravel bank, shoal, fluviatile",other,0.0779149984298948,0.3553650392967757,446856
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,3,"Erosion area, gully",other,0.15322286460595133,0.6364983463111018,6527830
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,4,Debris-covered areas,other,0.04412567149042734,0.0560072824026486,5144456
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,5,Rock,other,0.14349007597573815,0.15688068604162034,8522515
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,6,"Young conif. (growth, thicket)",other,0.13149073078101184,0.32650161604270894,6197856
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,7,"Young broadl. (growth, thicket)",other,0.3007459783009042,0.5493246552910257,11710168
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,8,Conif. pole timber CC<80,cc_split,0.08752074305380027,0.09988141536756791,16872338
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,9,Conif. pole timber CC>=80,cc_split,0.18705684525497987,0.26928716986665724,13052226
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,10,Broadl. pole timber,other,0.15095817606041972,0.3100160683123504,11283699
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,11,Conif. mature forest CC<80,cc_split,0.16577952762075618,0.20874826310492414,34458040
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,12,Conif. mature forest CC>=80,cc_split,0.2807230162269193,0.4106543777061132,26473625
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,13,Broadl. mature forest CC<80,cc_split,0.07956850114383571,0.35613118916867503,7528091
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,14,Broadl. mature forest CC>=80,cc_split,0.11638174706541454,0.22614281037449105,17921149
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.15227185630482026,0.19372194182402147,29168637
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.15857488474071185,0.42716614216650195,12563072
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.0020937308134550392,0.0023259703140426835,7767511
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.2705641328534331,0.6456834712116903,19212104
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,19,Clearcut areas,other,0.20409723271506752,0.2981183254779603,16044220
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,20,Mountain dwarf forest,other,0.15419821156810423,0.178648150133468,11827556
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,21,"Grassland, buffer strip",other,0.336867834649534,0.419556296416248,17945494
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,22,"Alpine grassland, heath",other,0.16128321514848631,0.26935827249541916,5704228
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2020,23,Low importance or small extent,other,0.22621789176728596,0.337234972132471,7578354
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,1,Waterbody,other,0.3404807434606487,0.6256168387191658,2556584
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,2,"Gravel bank, shoal, fluviatile",other,0.20295521834528002,0.5119076391499723,446856
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,3,"Erosion area, gully",other,0.32119642727924735,0.544653879943902,6527865
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,4,Debris-covered areas,other,0.3486840082753731,0.4607917727355429,5144456
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,5,Rock,other,0.4322250931735262,0.5235350128453866,8522515
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,6,"Young conif. (growth, thicket)",other,0.11463135638163352,0.43733607234501737,6197856
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,7,"Young broadl. (growth, thicket)",other,0.26142811573726565,0.5699780737560725,11710168
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,8,Conif. pole timber CC<80,cc_split,0.06973645071819608,0.10150436768158627,16872338
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,9,Conif. pole timber CC>=80,cc_split,0.21329781027099284,0.6269794133199962,13052226
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,10,Broadl. pole timber,other,0.15196627344300626,0.4282621328342771,11283699
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,11,Conif. mature forest CC<80,cc_split,0.07988042387211598,0.09053463284620948,34458040
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,12,Conif. mature forest CC>=80,cc_split,0.1493111126276644,0.27024413921402907,26473625
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,13,Broadl. mature forest CC<80,cc_split,0.08432766182136771,0.1335455429537183,7528091
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,14,Broadl. mature forest CC>=80,cc_split,0.13962643306266329,0.24321147042525007,17921149
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.12192614515546549,0.1347512055499885,29168637
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.12236373376582291,0.2285937706955751,12563072
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.019661706609011922,0.027663044184939038,7767511
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.25137959480265765,0.4745071128076342,19212104
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,19,Clearcut areas,other,0.27564619494758236,0.38859869784882034,16044220
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,20,Mountain dwarf forest,other,0.4376395562253493,0.4642901711900582,11827556
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,21,"Grassland, buffer strip",other,0.3778521635132932,0.522721748423309,17945494
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,22,"Alpine grassland, heath",other,0.24221630367109923,0.49999824691439404,5704228
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2020,23,Low importance or small extent,other,0.41770718180576083,0.7100051013716171,7578354
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,1,Waterbody,other,0.10424489148992659,0.6904889493167445,2556584
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,2,"Gravel bank, shoal, fluviatile",other,0.06450276706981674,0.15472545965590706,446856
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,3,"Erosion area, gully",other,0.22455405821478078,0.35819100681237104,6527830
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,4,Debris-covered areas,other,0.2278290415123097,0.33659146856343997,5144456
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,5,Rock,other,0.2155227394120817,0.27621259686841265,8522515
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,6,"Young conif. (growth, thicket)",other,0.12090115078392327,0.24979154081669533,6197856
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,7,"Young broadl. (growth, thicket)",other,0.4064981310754773,0.660042964370793,11710168
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,8,Conif. pole timber CC<80,cc_split,0.22254578981636905,0.49664403356547265,16872338
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,9,Conif. pole timber CC>=80,cc_split,0.2505709322549225,0.43352635787949123,13052226
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,10,Broadl. pole timber,other,0.22134713342991771,0.41382839084949,11283699
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,11,Conif. mature forest CC<80,cc_split,0.18411105725051224,0.23536100718439007,34458040
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,12,Conif. mature forest CC>=80,cc_split,0.24826650638932424,0.3322762938585101,26473625
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,13,Broadl. mature forest CC<80,cc_split,0.14030285468327783,0.33245347326433755,7528091
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,14,Broadl. mature forest CC>=80,cc_split,0.16767981627894937,0.19934413803489945,17921149
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.2685157092811939,0.4118899693530418,29168637
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.11714704702321463,0.15113906853355613,12563072
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.15611939638443517,0.33267889804082673,7767511
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.3405015720711602,0.6027842135353837,19212104
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,19,Clearcut areas,other,0.29964868605001427,0.49855518061956267,16044220
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,20,Mountain dwarf forest,other,0.2930078285214972,0.3084053882306708,11827556
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,21,"Grassland, buffer strip",other,0.3049515854548408,0.41429570007936256,17945494
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,22,"Alpine grassland, heath",other,0.13990231297440686,0.29358872050696433,5704228
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2020,23,Low importance or small extent,other,0.3096762645202,0.5999387202023025,7578354
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,1,Waterbody,other,0.3031902863877702,0.52594712319251,2556584
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,2,"Gravel bank, shoal, fluviatile",other,0.17692096173235403,0.6176978713500546,446856
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,3,"Erosion area, gully",other,0.25579480060909027,0.40028462598414644,6527865
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,4,Debris-covered areas,other,0.3003980732591185,0.4332724393016482,5144456
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,5,Rock,other,0.42786353708364283,0.5470997704316155,8522515
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,6,"Young conif. (growth, thicket)",other,0.07924335623251516,0.3549482272579421,6197856
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,7,"Young broadl. (growth, thicket)",other,0.16751057578062734,0.5327722881516302,11710168
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,8,Conif. pole timber CC<80,cc_split,0.06867921553428509,0.09624576036824298,16872338
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,9,Conif. pole timber CC>=80,cc_split,0.20042728677610588,0.635288800546359,13052226
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,10,Broadl. pole timber,other,0.10630027291189166,0.28060638625684714,11283699
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,11,Conif. mature forest CC<80,cc_split,0.0790823230315688,0.09439515422235276,34458040
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,12,Conif. mature forest CC>=80,cc_split,0.1197092737360103,0.20507943283173347,26473625
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,13,Broadl. mature forest CC<80,cc_split,0.07698887329155035,0.14789977963868928,7528091
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,14,Broadl. mature forest CC>=80,cc_split,0.1095742474472022,0.20376913332956498,17921149
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.07448814108304852,0.07868794143517917,29168637
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.10757819182781958,0.18525659965970107,12563072
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.00041512830360825476,0.0004594779460241511,7767511
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.20977895466777324,0.35670137950533687,19212104
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,19,Clearcut areas,other,0.225791570217733,0.30878066992349895,16044220
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,20,Mountain dwarf forest,other,0.2880059711448962,0.3079391042409776,11827556
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,21,"Grassland, buffer strip",other,0.25832403673444737,0.32462366318809616,17945494
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,22,"Alpine grassland, heath",other,0.11250233433439209,0.3691125249551736,5704228
+DOFA,dofa-base-rgb-nir-phaseF,F,2020,23,Low importance or small extent,other,0.32191719002094776,0.6664259811563302,7578354
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,1,Waterbody,other,0.11945533650472112,0.2884164963873669,2556584
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,2,"Gravel bank, shoal, fluviatile",other,0.11578006547606944,0.28032520543530803,446856
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,3,"Erosion area, gully",other,0.21419176438064175,0.39487808352852327,6527830
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,4,Debris-covered areas,other,0.20097564076805932,0.2568603949572122,5144456
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,5,Rock,other,0.256690101082704,0.3171265758992504,8522515
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,6,"Young conif. (growth, thicket)",other,0.09788075890762676,0.2532696790632115,6197856
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,7,"Young broadl. (growth, thicket)",other,0.30345273448992593,0.6531902872785429,11710168
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,8,Conif. pole timber CC<80,cc_split,0.1705721586288811,0.2072715115119197,16872338
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,9,Conif. pole timber CC>=80,cc_split,0.22829079264746976,0.476203829139949,13052226
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,10,Broadl. pole timber,other,0.1825805272555155,0.327772568197716,11283699
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,11,Conif. mature forest CC<80,cc_split,0.19733522875748286,0.24569186175417987,34458040
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,12,Conif. mature forest CC>=80,cc_split,0.1814141122713019,0.2478703993125233,26473625
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,13,Broadl. mature forest CC<80,cc_split,0.10517935705899213,0.24474159517997324,7528091
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,14,Broadl. mature forest CC>=80,cc_split,0.17529755030291017,0.235877565662782,17921149
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.21518679609213162,0.30585556671708725,29168637
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.18593084079101196,0.2697817062578325,12563072
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.11592228030786443,0.37168186823295135,7767511
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.3569426253613064,0.5402896007641849,19212104
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,19,Clearcut areas,other,0.18872009415140092,0.5907571698717669,16044220
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,20,Mountain dwarf forest,other,0.30640748898129777,0.33282387333444036,11827556
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,21,"Grassland, buffer strip",other,0.2513253966501543,0.3107899955275681,17945494
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,22,"Alpine grassland, heath",other,0.14650241170312975,0.21168824247558127,5704228
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2020,23,Low importance or small extent,other,0.2949493236294306,0.6774003959171081,7578354
+TerraMind,terramind-rgb-nir-phaseF,F,2020,1,Waterbody,other,0.42525340778683607,0.5684741827375904,2556584
+TerraMind,terramind-rgb-nir-phaseF,F,2020,2,"Gravel bank, shoal, fluviatile",other,0.18710491672135732,0.5391132713894409,446856
+TerraMind,terramind-rgb-nir-phaseF,F,2020,3,"Erosion area, gully",other,0.3225737154046336,0.47201466329343517,6527865
+TerraMind,terramind-rgb-nir-phaseF,F,2020,4,Debris-covered areas,other,0.3062115708321522,0.5442806780736389,5144456
+TerraMind,terramind-rgb-nir-phaseF,F,2020,5,Rock,other,0.3940620486592373,0.4762108368245758,8522515
+TerraMind,terramind-rgb-nir-phaseF,F,2020,6,"Young conif. (growth, thicket)",other,0.10378806247007148,0.39485089682625735,6197856
+TerraMind,terramind-rgb-nir-phaseF,F,2020,7,"Young broadl. (growth, thicket)",other,0.20732374845913648,0.4626897752448983,11710168
+TerraMind,terramind-rgb-nir-phaseF,F,2020,8,Conif. pole timber CC<80,cc_split,0.10791030341854059,0.18853854160579286,16872338
+TerraMind,terramind-rgb-nir-phaseF,F,2020,9,Conif. pole timber CC>=80,cc_split,0.16298108123493085,0.6582942250616868,13052226
+TerraMind,terramind-rgb-nir-phaseF,F,2020,10,Broadl. pole timber,other,0.13142294022760306,0.31538992665437104,11283699
+TerraMind,terramind-rgb-nir-phaseF,F,2020,11,Conif. mature forest CC<80,cc_split,0.10591079365290318,0.13043788909641987,34458040
+TerraMind,terramind-rgb-nir-phaseF,F,2020,12,Conif. mature forest CC>=80,cc_split,0.07751455493050101,0.12246577489860191,26473625
+TerraMind,terramind-rgb-nir-phaseF,F,2020,13,Broadl. mature forest CC<80,cc_split,0.13306743546781738,0.28325892978711337,7528091
+TerraMind,terramind-rgb-nir-phaseF,F,2020,14,Broadl. mature forest CC>=80,cc_split,0.17250911967461502,0.4205960789679278,17921149
+TerraMind,terramind-rgb-nir-phaseF,F,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.10139499921170876,0.11008934013611948,29168637
+TerraMind,terramind-rgb-nir-phaseF,F,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.08533869832871216,0.11220002559883442,12563072
+TerraMind,terramind-rgb-nir-phaseF,F,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.0,0.0,7767511
+TerraMind,terramind-rgb-nir-phaseF,F,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.16775659381592606,0.2048442481885378,19212104
+TerraMind,terramind-rgb-nir-phaseF,F,2020,19,Clearcut areas,other,0.22592879529201818,0.33469666957944977,16044220
+TerraMind,terramind-rgb-nir-phaseF,F,2020,20,Mountain dwarf forest,other,0.3420487139651358,0.3633949397491756,11827556
+TerraMind,terramind-rgb-nir-phaseF,F,2020,21,"Grassland, buffer strip",other,0.37462376673320413,0.514569395526253,17945494
+TerraMind,terramind-rgb-nir-phaseF,F,2020,22,"Alpine grassland, heath",other,0.14208311446278873,0.3943315379399281,5704228
+TerraMind,terramind-rgb-nir-phaseF,F,2020,23,Low importance or small extent,other,0.4432743012622257,0.7360723713882988,7578354
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,1,Waterbody,other,0.2793179147549285,0.6800281156418095,2556584
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,2,"Gravel bank, shoal, fluviatile",other,0.22253328053527757,0.3785425282417602,446856
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,3,"Erosion area, gully",other,0.37017896627397584,0.5122884633944205,6527830
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,4,Debris-covered areas,other,0.35836078322012815,0.5860186188782643,5144456
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,5,Rock,other,0.3506739784597874,0.4658555602424871,8522515
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,6,"Young conif. (growth, thicket)",other,0.17561803581808302,0.3446457936421885,6197856
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,7,"Young broadl. (growth, thicket)",other,0.3718760093693887,0.7806483220394447,11710168
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,8,Conif. pole timber CC<80,cc_split,0.21388101846958923,0.35635013950052447,16872338
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,9,Conif. pole timber CC>=80,cc_split,0.21985770444994304,0.5740695878235635,13052226
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,10,Broadl. pole timber,other,0.18578108697385343,0.4512350958670557,11283699
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,11,Conif. mature forest CC<80,cc_split,0.23467021382496495,0.3309151071854348,34458040
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,12,Conif. mature forest CC>=80,cc_split,0.17346900917034613,0.2652706608936253,26473625
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,13,Broadl. mature forest CC<80,cc_split,0.1144513188804545,0.1682801124481625,7528091
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,14,Broadl. mature forest CC>=80,cc_split,0.14676151767807297,0.19759653803447536,17921149
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.23081890182461848,0.3040431748662099,29168637
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.15882371599771014,0.2092430099899133,12563072
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.05553198266908831,0.06326827216594866,7767511
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.34080207341871527,0.5521449394610815,19212104
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,19,Clearcut areas,other,0.30131881913288455,0.5022078979221177,16044220
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,20,Mountain dwarf forest,other,0.5308926902480828,0.589765459575926,11827556
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,21,"Grassland, buffer strip",other,0.3109900151225079,0.4497984285080143,17945494
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,22,"Alpine grassland, heath",other,0.3025562010099091,0.6203903490533689,5704228
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2020,23,Low importance or small extent,other,0.4402568149061042,0.789760942811592,7578354
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,1,Waterbody,other,0.4347090206629575,0.6918845615868675,2556584
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,2,"Gravel bank, shoal, fluviatile",other,0.23314564577370372,0.6117563599906906,446856
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,3,"Erosion area, gully",other,0.379256613171666,0.6340308814597115,6527865
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,4,Debris-covered areas,other,0.4239001873679917,0.606799047362831,5144456
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,5,Rock,other,0.45253393695324184,0.5336430619365293,8522515
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,6,"Young conif. (growth, thicket)",other,0.1832530506204866,0.4622322622532695,6197856
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,7,"Young broadl. (growth, thicket)",other,0.3820672136629471,0.698010993522894,11710168
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,8,Conif. pole timber CC<80,cc_split,0.0991301288611039,0.11162436409227933,16872338
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,9,Conif. pole timber CC>=80,cc_split,0.24126069908637007,0.589415246104381,13052226
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,10,Broadl. pole timber,other,0.1839208319498447,0.34220604431224194,11283699
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,11,Conif. mature forest CC<80,cc_split,0.09843890818533615,0.1158827664022678,34458040
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,12,Conif. mature forest CC>=80,cc_split,0.20747571066317405,0.4354622383598771,26473625
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,13,Broadl. mature forest CC<80,cc_split,0.06254128013224079,0.07596016041782705,7528091
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,14,Broadl. mature forest CC>=80,cc_split,0.17516421436921986,0.2934477024882724,17921149
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,15,"Old conif. forest, multilayered CC<80",cc_split,0.18625498978275593,0.21761397352917108,29168637
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,16,"Old conif. forest, multilayered CC>=80",cc_split,0.13609625980887458,0.31798647655605256,12563072
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,17,"Old broadl. forest, multilayered CC<80",cc_split,0.0659091419176962,0.08733325256958117,7767511
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.32761352445460495,0.6919165126318284,19212104
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,19,Clearcut areas,other,0.2890222002125383,0.44975424171446166,16044220
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,20,Mountain dwarf forest,other,0.4743521187479848,0.524779590982279,11827556
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,21,"Grassland, buffer strip",other,0.318558997219118,0.4320028192035282,17945494
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,22,"Alpine grassland, heath",other,0.24892069139908313,0.5332493722200445,5704228
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2020,23,Low importance or small extent,other,0.5102649905112903,0.8079507766462216,7578354
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,1,Waterbody,other,0.6035242578655006,0.7744553532300593,6081235
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,2,"Gravel bank, shoal, fluviatile",other,0.23824314837632832,0.5653398061174431,1329052
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,3,"Erosion area, gully",other,0.3641471553809593,0.5866235801429128,10967389
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,4,Debris-covered areas,other,0.4736101098512696,0.619327138722114,18226164
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,5,Rock,other,0.5329832301792383,0.5962467323202381,40564333
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,6,"Young conif. (growth, thicket)",other,0.20496259627766203,0.28129236391087464,20977466
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,7,"Young broadl. (growth, thicket)",other,0.40727983748982305,0.6468085041886553,17813951
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,8,Conif. pole timber CC<80,cc_split,0.15197799239303686,0.448548429580366,7968921
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,9,Conif. pole timber CC>=80,cc_split,0.42283996135889557,0.6095430295717708,41495858
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,10,Broadl. pole timber,other,0.1890038435658053,0.3539668745551944,8211452
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,11,Conif. mature forest CC<80,cc_split,0.18060435907276737,0.2757968520696187,30966695
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,12,Conif. mature forest CC>=80,cc_split,0.3453257551051798,0.4407440824375704,83805284
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,13,Broadl. mature forest CC<80,cc_split,0.13348571233837875,0.260710424651686,4206836
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,14,Broadl. mature forest CC>=80,cc_split,0.09225045349020436,0.11590129337746138,30797042
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.36018239755242876,0.5434207262350274,49024157
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.17423556435552895,0.33621762179342735,29697908
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.08021539506742856,0.28249708288757913,2885559
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.2348800725940813,0.5783844570530762,22872162
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,19,Clearcut areas,other,0.42445029823189706,0.6646577850460678,10559109
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,20,Mountain dwarf forest,other,0.6915841943410517,0.7809618349330936,51728273
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,21,"Grassland, buffer strip",other,0.29608398179499323,0.38284616097288715,22256394
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,22,"Alpine grassland, heath",other,0.5124510352214576,0.761572055457617,42583943
+Clay v1.0,clay-v1-rgb-nir-ndsm-phaseE,E,2013,23,Low importance or small extent,other,0.3997156972447657,0.7472019128475771,7670240
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,1,Waterbody,other,0.6165655931786045,0.7806901065326369,6081235
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,2,"Gravel bank, shoal, fluviatile",other,0.29308558664998496,0.709264949753659,1329052
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,3,"Erosion area, gully",other,0.3246316206565251,0.6015009588882094,10967389
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,4,Debris-covered areas,other,0.4737302459904411,0.6458465972324182,18226164
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,5,Rock,other,0.49872570956365664,0.5643122493842065,40564333
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,6,"Young conif. (growth, thicket)",other,0.20132722215512075,0.33214002110645774,20977466
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,7,"Young broadl. (growth, thicket)",other,0.4125693582606483,0.6055125558614145,17813951
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,8,Conif. pole timber CC<80,cc_split,0.12026724931041549,0.3579405543109287,7968921
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,9,Conif. pole timber CC>=80,cc_split,0.39658335018779395,0.5395400186688513,41495858
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,10,Broadl. pole timber,other,0.1708468916906913,0.41651427786462125,8211452
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,11,Conif. mature forest CC<80,cc_split,0.17632170568281463,0.32855708366682335,30966695
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,12,Conif. mature forest CC>=80,cc_split,0.36202220589719863,0.4892739818171847,83805284
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,13,Broadl. mature forest CC<80,cc_split,0.04974731130496084,0.17821184377047264,4206836
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,14,Broadl. mature forest CC>=80,cc_split,0.25546559140693803,0.3856899633412845,30797042
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.2965806536065441,0.4184819537029469,49024157
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.15012896909487483,0.2449970213390115,29697908
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.07909952555731636,0.28074179041218705,2885559
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.21809199039906169,0.36736159878545804,22872162
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,19,Clearcut areas,other,0.3245408528268165,0.5163235837417721,10559109
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,20,Mountain dwarf forest,other,0.674273928841406,0.7576922585449547,51728273
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,21,"Grassland, buffer strip",other,0.32492116360306333,0.4151295128941373,22256394
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,22,"Alpine grassland, heath",other,0.5206609002996894,0.7513829097507481,42583943
+Clay v1.0,clay-v1-rgb-nir-phaseF,F,2013,23,Low importance or small extent,other,0.4246670392027331,0.724363905171155,7670240
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,1,Waterbody,other,0.588239302227024,0.7495622188585049,6081235
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,2,"Gravel bank, shoal, fluviatile",other,0.24886326204335707,0.5587870151055038,1329052
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,3,"Erosion area, gully",other,0.2842408023615797,0.5101249714038592,10967389
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,4,Debris-covered areas,other,0.4376485445656611,0.6104175294373517,18226164
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,5,Rock,other,0.42675175375362817,0.46292527477279116,40564333
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,6,"Young conif. (growth, thicket)",other,0.20091000010726323,0.34286948671493495,20977466
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,7,"Young broadl. (growth, thicket)",other,0.3712382612417353,0.565016205557094,17813951
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,8,Conif. pole timber CC<80,cc_split,0.11789387164391589,0.3385644053944066,7968921
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,9,Conif. pole timber CC>=80,cc_split,0.3938778307403635,0.5565153996815778,41495858
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,10,Broadl. pole timber,other,0.17743662501858998,0.4087183362942388,8211452
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,11,Conif. mature forest CC<80,cc_split,0.18265065729719476,0.3720494873605336,30966695
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,12,Conif. mature forest CC>=80,cc_split,0.34772154098028424,0.45643466824836487,83805284
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,13,Broadl. mature forest CC<80,cc_split,0.15360300236851798,0.3305928731236492,4206836
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,14,Broadl. mature forest CC>=80,cc_split,0.20492971295674725,0.3329200252413852,30797042
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.26770758756515084,0.36222434176685586,49024157
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.16178784256921708,0.2839174058994324,29697908
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.028231574271502306,0.06532668366857167,2885559
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.21600358184639704,0.4343032809928506,22872162
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,19,Clearcut areas,other,0.33466635363207625,0.6242362873609885,10559109
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,20,Mountain dwarf forest,other,0.6388509313669574,0.7038504842409875,51728273
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,21,"Grassland, buffer strip",other,0.33018524918076814,0.4662178877674434,22256394
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,22,"Alpine grassland, heath",other,0.5055119747600603,0.7497794415139059,42583943
+Clay v1.5,clay-v1.5-rgb-nir-ndsm-phaseE,E,2013,23,Low importance or small extent,other,0.406762081230855,0.6560341006278813,7670240
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,1,Waterbody,other,0.5045687800099726,0.8246693311473738,6081235
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,2,"Gravel bank, shoal, fluviatile",other,0.25931167239950326,0.6349006660386501,1329052
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,3,"Erosion area, gully",other,0.2773507107936162,0.5383675184677046,10967389
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,4,Debris-covered areas,other,0.42704275484322546,0.579641991589673,18226164
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,5,Rock,other,0.4104967736318297,0.45433948094253146,40564333
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,6,"Young conif. (growth, thicket)",other,0.15599962316710136,0.24904685818582664,20977466
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,7,"Young broadl. (growth, thicket)",other,0.35629326826794255,0.588535075683098,17813951
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,8,Conif. pole timber CC<80,cc_split,0.091674206283033,0.21137453866088018,7968921
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,9,Conif. pole timber CC>=80,cc_split,0.31367483677556274,0.3985703344174737,41495858
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,10,Broadl. pole timber,other,0.14564991929707735,0.3365261101203539,8211452
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,11,Conif. mature forest CC<80,cc_split,0.1700469294218303,0.2804766863238069,30966695
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,12,Conif. mature forest CC>=80,cc_split,0.2536307991160934,0.3099021655961455,83805284
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,13,Broadl. mature forest CC<80,cc_split,0.103259523082947,0.35230420201785856,4206836
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,14,Broadl. mature forest CC>=80,cc_split,0.20521757115457898,0.33732099985446656,30797042
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.34252971467355764,0.5205893290526138,49024157
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.16075172360335205,0.38016139049255593,29697908
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.0846676017024099,0.3397456090830234,2885559
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.19384084327697595,0.4047907233255868,22872162
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,19,Clearcut areas,other,0.33015446914721236,0.6170901351619724,10559109
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,20,Mountain dwarf forest,other,0.648573208999863,0.7396894151096055,51728273
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,21,"Grassland, buffer strip",other,0.3020720518264447,0.38236122167858816,22256394
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,22,"Alpine grassland, heath",other,0.49078616818408605,0.7592012792239554,42583943
+Clay v1.5,clay-v1.5-rgb-nir-phaseF,F,2013,23,Low importance or small extent,other,0.40223107119027657,0.610053010075304,7670240
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,1,Waterbody,other,0.6611634148622971,0.7171273598208259,6081235
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,2,"Gravel bank, shoal, fluviatile",other,0.15548638174486068,0.6473742186159759,1329052
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,3,"Erosion area, gully",other,0.1688719303073622,0.5831820135129702,10967389
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,4,Debris-covered areas,other,0.20142523457557265,0.2602327620886106,18226164
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,5,Rock,other,0.3529489574224757,0.3913838297304186,40564333
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,6,"Young conif. (growth, thicket)",other,0.16084828070834112,0.23984741531698825,20977466
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,7,"Young broadl. (growth, thicket)",other,0.3708590466585458,0.5308823966115097,17813951
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,8,Conif. pole timber CC<80,cc_split,0.07166970015156791,0.12828160801192534,7968921
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,9,Conif. pole timber CC>=80,cc_split,0.34449514780584256,0.44407487609968205,41495858
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,10,Broadl. pole timber,other,0.16146103734177752,0.46758953227760447,8211452
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,11,Conif. mature forest CC<80,cc_split,0.16306164804966672,0.313160380854334,30966695
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,12,Conif. mature forest CC>=80,cc_split,0.3367058551551396,0.49523398787121825,83805284
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,13,Broadl. mature forest CC<80,cc_split,0.10040905270789191,0.5209687280416921,4206836
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,14,Broadl. mature forest CC>=80,cc_split,0.12123644261285314,0.20865526630771877,30797042
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.18708492318856665,0.23622254228665268,49024157
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.1737847811914453,0.4050676566174291,29697908
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.004086852044554588,0.004894372286271049,2885559
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.23654219180216374,0.4617495713785168,22872162
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,19,Clearcut areas,other,0.28231452717978556,0.4573123546693192,10559109
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,20,Mountain dwarf forest,other,0.6542852924570336,0.7837204617289273,51728273
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,21,"Grassland, buffer strip",other,0.42126385068795585,0.5694088179783302,22256394
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,22,"Alpine grassland, heath",other,0.4576336495459204,0.557686379582088,42583943
+Prithvi,prithvi-v2-300-rgb-nir-ndsm-phaseE,E,2013,23,Low importance or small extent,other,0.26423314905923057,0.4056583627109452,7670240
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,1,Waterbody,other,0.505061452818774,0.7763256970006914,6081235
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,2,"Gravel bank, shoal, fluviatile",other,0.2951233150439431,0.7263282399785712,1329052
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,3,"Erosion area, gully",other,0.28551165222393354,0.5311226765094226,10967389
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,4,Debris-covered areas,other,0.4530589880873425,0.5749404537345324,18226164
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,5,Rock,other,0.4837371087478059,0.5449980158677822,40564333
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,6,"Young conif. (growth, thicket)",other,0.17776543895685354,0.3282068005735297,20977466
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,7,"Young broadl. (growth, thicket)",other,0.3459716031005551,0.4870512442747822,17813951
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,8,Conif. pole timber CC<80,cc_split,0.09178194150552954,0.3064897995600659,7968921
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,9,Conif. pole timber CC>=80,cc_split,0.3501898129298038,0.5642441951676237,41495858
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,10,Broadl. pole timber,other,0.14739929109963346,0.4593176700052561,8211452
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,11,Conif. mature forest CC<80,cc_split,0.1612076413486605,0.27860822732293516,30966695
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,12,Conif. mature forest CC>=80,cc_split,0.29878716758171975,0.3819062172738416,83805284
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,13,Broadl. mature forest CC<80,cc_split,0.08837771356069109,0.2296538300993906,4206836
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,14,Broadl. mature forest CC>=80,cc_split,0.250200197029332,0.39457763508586313,30797042
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.3118606854290355,0.4392177717609708,49024157
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.11343539843048793,0.1965050534872692,29697908
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.022821430965480713,0.05368249271631597,2885559
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.23959716237812123,0.43108814986532534,22872162
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,19,Clearcut areas,other,0.3233189200077046,0.5803976452937459,10559109
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,20,Mountain dwarf forest,other,0.6440952034428076,0.7149556491089505,51728273
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,21,"Grassland, buffer strip",other,0.3823855223937159,0.5258992988711468,22256394
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,22,"Alpine grassland, heath",other,0.5271925108675782,0.7337855726511752,42583943
+Prithvi,prithvi-v2-300-rgb-nir-phaseF,F,2013,23,Low importance or small extent,other,0.3801513710459157,0.6949417488892133,7670240
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,1,Waterbody,other,0.5435694497566987,0.8076545306997674,6081235
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,2,"Gravel bank, shoal, fluviatile",other,0.22683350460191226,0.6112010666249327,1329052
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,3,"Erosion area, gully",other,0.2376449789144688,0.42620326497035893,10967389
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,4,Debris-covered areas,other,0.42086823984336014,0.5657641399473855,18226164
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,5,Rock,other,0.43171187908339764,0.47306363942924934,40564333
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,6,"Young conif. (growth, thicket)",other,0.20487520495983425,0.3503623364232839,20977466
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,7,"Young broadl. (growth, thicket)",other,0.3757257238022516,0.5608926397069353,17813951
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,8,Conif. pole timber CC<80,cc_split,0.1162678110626759,0.31321605522253265,7968921
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,9,Conif. pole timber CC>=80,cc_split,0.4085217514912056,0.6073885976764235,41495858
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,10,Broadl. pole timber,other,0.18033751981022905,0.43788491974379196,8211452
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,11,Conif. mature forest CC<80,cc_split,0.1781556782659534,0.3027208102123911,30966695
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,12,Conif. mature forest CC>=80,cc_split,0.32829002227428,0.4250195846839443,83805284
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,13,Broadl. mature forest CC<80,cc_split,0.09841736974208479,0.28026455036516756,4206836
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,14,Broadl. mature forest CC>=80,cc_split,0.13040606722707138,0.16941870586142657,30797042
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.2977350223115413,0.4259433364657346,49024157
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.15589704501838209,0.32037310506854555,29697908
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.08794202771586647,0.32701254765541093,2885559
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.2168984387697222,0.45622779341979125,22872162
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,19,Clearcut areas,other,0.37779259205389165,0.6641687286304175,10559109
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,20,Mountain dwarf forest,other,0.6445806896231272,0.727827507405863,51728273
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,21,"Grassland, buffer strip",other,0.4196442091330749,0.5945771808317196,22256394
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,22,"Alpine grassland, heath",other,0.5234443014180553,0.7091027479536125,42583943
+DOFA,dofa-base-rgb-nir-ndsm-phaseE,E,2013,23,Low importance or small extent,other,0.32676324936049717,0.6253123761446838,7670240
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,1,Waterbody,other,0.5404102703150007,0.7570876639366839,6081235
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,2,"Gravel bank, shoal, fluviatile",other,0.2639444886990306,0.7052982125605318,1329052
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,3,"Erosion area, gully",other,0.22284357999637255,0.41237581707004284,10967389
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,4,Debris-covered areas,other,0.3880601325828656,0.48505006319486643,18226164
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,5,Rock,other,0.4323381922730092,0.4850948492114982,40564333
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,6,"Young conif. (growth, thicket)",other,0.16506546703257596,0.3841710910173803,20977466
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,7,"Young broadl. (growth, thicket)",other,0.31110882747314156,0.5196965007931144,17813951
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,8,Conif. pole timber CC<80,cc_split,0.07845713594165633,0.2988085839977583,7968921
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,9,Conif. pole timber CC>=80,cc_split,0.31793540663051306,0.5241586280731922,41495858
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,10,Broadl. pole timber,other,0.12988832353333835,0.42168035567887385,8211452
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,11,Conif. mature forest CC<80,cc_split,0.14492594899215464,0.27224962173070133,30966695
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,12,Conif. mature forest CC>=80,cc_split,0.27479021749667343,0.33993423374115644,83805284
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,13,Broadl. mature forest CC<80,cc_split,0.09967673251646518,0.2315985220246285,4206836
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,14,Broadl. mature forest CC>=80,cc_split,0.1741229012193897,0.24210224475454492,30797042
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.21293595910552374,0.2817995422134439,49024157
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.13691982392681298,0.2480705038213466,29697908
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.01336419727698358,0.0247737093575283,2885559
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.22880479986474603,0.44104942943303743,22872162
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,19,Clearcut areas,other,0.3104313395830724,0.585867235578305,10559109
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,20,Mountain dwarf forest,other,0.6384193754278973,0.7239380676791587,51728273
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,21,"Grassland, buffer strip",other,0.3654965753168295,0.49359788472472227,22256394
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,22,"Alpine grassland, heath",other,0.5172264479545604,0.7462223026176792,42583943
+DOFA,dofa-base-rgb-nir-phaseF,F,2013,23,Low importance or small extent,other,0.2841660931252767,0.6200576513903086,7670240
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,1,Waterbody,other,0.623263767859663,0.7233233052167858,6081235
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,2,"Gravel bank, shoal, fluviatile",other,0.1932630306581884,0.7285463623695687,1329052
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,3,"Erosion area, gully",other,0.22857662501235526,0.4179172453899465,10967389
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,4,Debris-covered areas,other,0.3502014613482476,0.4421214469484638,18226164
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,5,Rock,other,0.4219721615225572,0.5014545906621958,40564333
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,6,"Young conif. (growth, thicket)",other,0.17837672143208516,0.28868920583639607,20977466
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,7,"Young broadl. (growth, thicket)",other,0.32580510506056737,0.5280460802884211,17813951
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,8,Conif. pole timber CC<80,cc_split,0.07802300403160713,0.2589744583990731,7968921
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,9,Conif. pole timber CC>=80,cc_split,0.38796947225409145,0.6095001819217716,41495858
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,10,Broadl. pole timber,other,0.1723331066893971,0.3686043588880505,8211452
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,11,Conif. mature forest CC<80,cc_split,0.12841209716106808,0.18170741178546823,30966695
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,12,Conif. mature forest CC>=80,cc_split,0.19960638518965715,0.22928804823333096,83805284
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,13,Broadl. mature forest CC<80,cc_split,0.04715522827041608,0.1287625664513663,4206836
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,14,Broadl. mature forest CC>=80,cc_split,0.208860811138532,0.30003433446627764,30797042
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.35872045627426474,0.560346749052717,49024157
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.1618539491715465,0.3633605437797167,29697908
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.026907366195827898,0.15661055622151548,2885559
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.19473775675913596,0.3852306572505039,22872162
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,19,Clearcut areas,other,0.33821554151308925,0.8384352316090307,10559109
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,20,Mountain dwarf forest,other,0.6722015925041452,0.8031838024053113,51728273
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,21,"Grassland, buffer strip",other,0.37508509273394164,0.45356727599268776,22256394
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,22,"Alpine grassland, heath",other,0.4864189717117356,0.6294653832314213,42583943
+TerraMind,terramind-rgb-nir-ndsm-phaseE,E,2013,23,Low importance or small extent,other,0.25896916796654607,0.6775274306931726,7670240
+TerraMind,terramind-rgb-nir-phaseF,F,2013,1,Waterbody,other,0.5769806769022865,0.7189408072537897,6081235
+TerraMind,terramind-rgb-nir-phaseF,F,2013,2,"Gravel bank, shoal, fluviatile",other,0.247971304364541,0.7376852072003203,1329052
+TerraMind,terramind-rgb-nir-phaseF,F,2013,3,"Erosion area, gully",other,0.25585397408753985,0.476811025851276,10967389
+TerraMind,terramind-rgb-nir-phaseF,F,2013,4,Debris-covered areas,other,0.4334750843818643,0.6669795136266743,18226164
+TerraMind,terramind-rgb-nir-phaseF,F,2013,5,Rock,other,0.36894307115315755,0.3928318752338415,40564333
+TerraMind,terramind-rgb-nir-phaseF,F,2013,6,"Young conif. (growth, thicket)",other,0.20217761459645756,0.3548771810665788,20977466
+TerraMind,terramind-rgb-nir-phaseF,F,2013,7,"Young broadl. (growth, thicket)",other,0.3249898116656609,0.4547309577757343,17813951
+TerraMind,terramind-rgb-nir-phaseF,F,2013,8,Conif. pole timber CC<80,cc_split,0.0812705694388405,0.30154270571887964,7968921
+TerraMind,terramind-rgb-nir-phaseF,F,2013,9,Conif. pole timber CC>=80,cc_split,0.33431082835345993,0.6578714675570753,41495858
+TerraMind,terramind-rgb-nir-phaseF,F,2013,10,Broadl. pole timber,other,0.13761755211795246,0.4101765436855747,8211452
+TerraMind,terramind-rgb-nir-phaseF,F,2013,11,Conif. mature forest CC<80,cc_split,0.13628898297833303,0.23541840677540823,30966695
+TerraMind,terramind-rgb-nir-phaseF,F,2013,12,Conif. mature forest CC>=80,cc_split,0.24569847461402514,0.31092218481116296,83805284
+TerraMind,terramind-rgb-nir-phaseF,F,2013,13,Broadl. mature forest CC<80,cc_split,0.1256168022681195,0.3678346386690615,4206836
+TerraMind,terramind-rgb-nir-phaseF,F,2013,14,Broadl. mature forest CC>=80,cc_split,0.28107022095933304,0.46723727557990796,30797042
+TerraMind,terramind-rgb-nir-phaseF,F,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.30645218833960325,0.43838016429328913,49024157
+TerraMind,terramind-rgb-nir-phaseF,F,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.1321208381032387,0.22522047680934293,29697908
+TerraMind,terramind-rgb-nir-phaseF,F,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.0,0.0,2885559
+TerraMind,terramind-rgb-nir-phaseF,F,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.1818493904775445,0.25221140004167514,22872162
+TerraMind,terramind-rgb-nir-phaseF,F,2013,19,Clearcut areas,other,0.33443899687931256,0.6173155329677912,10559109
+TerraMind,terramind-rgb-nir-phaseF,F,2013,20,Mountain dwarf forest,other,0.6408328139700366,0.7180589423505401,51728273
+TerraMind,terramind-rgb-nir-phaseF,F,2013,21,"Grassland, buffer strip",other,0.41469129592272413,0.5820583064803759,22256394
+TerraMind,terramind-rgb-nir-phaseF,F,2013,22,"Alpine grassland, heath",other,0.5350559262949502,0.7537587583188339,42583943
+TerraMind,terramind-rgb-nir-phaseF,F,2013,23,Low importance or small extent,other,0.36523418649917067,0.6354700765556228,7670240
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,1,Waterbody,other,0.5955243736949666,0.7279236865538004,6081235
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,2,"Gravel bank, shoal, fluviatile",other,0.25336264348883764,0.601839506655872,1329052
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,3,"Erosion area, gully",other,0.3758726430086483,0.6216374745164961,10967389
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,4,Debris-covered areas,other,0.45391705141607996,0.6333472583698907,18226164
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,5,Rock,other,0.4727997962863109,0.5203394814848799,40564333
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,6,"Young conif. (growth, thicket)",other,0.1944056225166849,0.341195881332855,20977466
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,7,"Young broadl. (growth, thicket)",other,0.38194133623298454,0.5834115070822863,17813951
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,8,Conif. pole timber CC<80,cc_split,0.1269005749260247,0.28307596473851354,7968921
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,9,Conif. pole timber CC>=80,cc_split,0.40981012549746126,0.6482116118673821,41495858
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,10,Broadl. pole timber,other,0.19279049633861928,0.36849512120389916,8211452
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,11,Conif. mature forest CC<80,cc_split,0.19241095530303276,0.3431992338865998,30966695
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,12,Conif. mature forest CC>=80,cc_split,0.3295958201372738,0.43392529998466445,83805284
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,13,Broadl. mature forest CC<80,cc_split,0.10645357483422395,0.19767159927318298,4206836
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,14,Broadl. mature forest CC>=80,cc_split,0.21902517245446668,0.3498262268174976,30797042
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.32098689051756846,0.45083761460701915,49024157
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.155380291362909,0.2705428611335182,29697908
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.030668070026514012,0.04837849442690307,2885559
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.22503014994887147,0.439613404277217,22872162
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,19,Clearcut areas,other,0.4181978044059619,0.6669802347906438,10559109
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,20,Mountain dwarf forest,other,0.6492474896647349,0.7123531265000863,51728273
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,21,"Grassland, buffer strip",other,0.3743760936412671,0.5695888111973575,22256394
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,22,"Alpine grassland, heath",other,0.519302383567498,0.7577354215414012,42583943
+U-Net,unet-mit-b2-rgb-nir-ndsm-phaseE,E,2013,23,Low importance or small extent,other,0.41634877216138455,0.7392699576545193,7670240
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,1,Waterbody,other,0.5943530120624806,0.7747071113022272,6081235
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,2,"Gravel bank, shoal, fluviatile",other,0.2064033082884414,0.49692036128007033,1329052
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,3,"Erosion area, gully",other,0.36183436826303716,0.6621237744006344,10967389
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,4,Debris-covered areas,other,0.44282557508751136,0.6517949690346252,18226164
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,5,Rock,other,0.45472114503477484,0.5046370416099286,40564333
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,6,"Young conif. (growth, thicket)",other,0.21233788926034763,0.3683208925234344,20977466
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,7,"Young broadl. (growth, thicket)",other,0.3663925038498487,0.5514104086173809,17813951
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,8,Conif. pole timber CC<80,cc_split,0.11115969033066642,0.22856532270805546,7968921
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,9,Conif. pole timber CC>=80,cc_split,0.3881819192204252,0.5479381098711105,41495858
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,10,Broadl. pole timber,other,0.16288906164779526,0.3543204052096998,8211452
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,11,Conif. mature forest CC<80,cc_split,0.16163352561704697,0.31814250761988,30966695
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,12,Conif. mature forest CC>=80,cc_split,0.33431062618034757,0.44871741022916883,83805284
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,13,Broadl. mature forest CC<80,cc_split,0.1028753546789334,0.18674509774091502,4206836
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,14,Broadl. mature forest CC>=80,cc_split,0.2073535354330488,0.3147563327672833,30797042
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,15,"Old conif. forest, multilayered CC<80",cc_split,0.25322721967329964,0.3648890688727192,49024157
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,16,"Old conif. forest, multilayered CC>=80",cc_split,0.16301853555493112,0.3116741758375708,29697908
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,17,"Old broadl. forest, multilayered CC<80",cc_split,0.019528212343389625,0.032669926347026694,2885559
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,18,"Old broadl. forest, multilayered CC>=80",cc_split,0.26270695659147775,0.5339113984939421,22872162
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,19,Clearcut areas,other,0.35691546319456474,0.6385601285108431,10559109
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,20,Mountain dwarf forest,other,0.6627091368029712,0.7250938766117322,51728273
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,21,"Grassland, buffer strip",other,0.3500356392070424,0.5038049290464574,22256394
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,22,"Alpine grassland, heath",other,0.5224108181499811,0.7352469920411081,42583943
+U-Net,unet-mit-b2-rgb-nir-phaseF,F,2013,23,Low importance or small extent,other,0.4113107769478123,0.6896636871857986,7670240

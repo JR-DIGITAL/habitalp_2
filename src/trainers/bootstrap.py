@@ -189,3 +189,68 @@ def cm_and_ci(
     iou, f1 = macro_iou_f1(cm)
     ci = bootstrap_ci(cm, n_boot=n_boot, seed=seed)
     return cm, iou, f1, ci
+
+
+def fixed_class_resamples(
+    tile_cms: np.ndarray, n_boot: int = 1000, seed: int = 0, binary: bool = False,
+) -> tuple[np.ndarray, np.ndarray, float]:
+    """Tile resamples for the fixed-class-set block bootstrap (R2-M7, analysis B2).
+
+    The class set K is fixed to the classes present in the reference of the full test
+    set. Resamples in which a class of K has no reference pixel are redrawn, so every
+    accepted resample scores the same classes. Draws use the same generator as
+    block_bootstrap_ci; with no redraw the resamples are identical to it. A class that is
+    predicted but absent from the whole reference (none in this study) is left out of K.
+
+    Returns (indices of shape (n_boot, n_tiles), class mask K, redraw rate).
+    """
+    cms = np.stack([collapse_binary(c) for c in tile_cms]) if binary else tile_cms
+    ref_px = cms.sum(axis=2)  # (tiles, classes): reference pixels per tile and class
+    k_mask = ref_px.sum(axis=0) > 0
+    support = ref_px[:, k_mask] > 0
+    rng = np.random.default_rng(seed)
+    n = tile_cms.shape[0]
+    keep, draws = [], 0
+    while len(keep) < n_boot:
+        idx = rng.integers(0, n, size=n)
+        draws += 1
+        if support[idx].any(axis=0).all():
+            keep.append(idx)
+    return np.stack(keep), k_mask, 1.0 - n_boot / draws
+
+
+def macro_iou_f1_fixed(cm: np.ndarray, k_mask: np.ndarray) -> tuple[float, float]:
+    """Macro IoU and F1 over the fixed class set K (every class of K has reference pixels
+    in an accepted resample, so no class drops out of the mean)."""
+    tp = np.diag(cm).astype(np.float64)
+    fp = cm.sum(axis=0) - tp
+    fn = cm.sum(axis=1) - tp
+    iou = tp / (tp + fp + fn)
+    f1 = 2 * tp / (2 * tp + fp + fn)
+    return float(iou[k_mask].mean()), float(f1[k_mask].mean())
+
+
+def block_bootstrap_ci_fixed(
+    tile_cms: np.ndarray, n_boot: int = 1000, seed: int = 0, alpha: float = 0.05,
+    binary: bool = False,
+) -> dict[str, float]:
+    """Percentile CIs for macro IoU/F1, block bootstrap with a fixed class set (see
+    fixed_class_resamples). Reports the redraw rate next to the CI."""
+    idx_sets, k_mask, redraw = fixed_class_resamples(tile_cms, n_boot, seed, binary)
+    ious = np.empty(n_boot)
+    f1s = np.empty(n_boot)
+    for b, idx in enumerate(idx_sets):
+        cm = tile_cms[idx].sum(axis=0)
+        if binary:
+            cm = collapse_binary(cm)
+        ious[b], f1s[b] = macro_iou_f1_fixed(cm, k_mask)
+    lo, hi = 100 * (alpha / 2), 100 * (1 - alpha / 2)
+    return {
+        "IoU_ci_low": float(np.percentile(ious, lo)),
+        "IoU_ci_high": float(np.percentile(ious, hi)),
+        "F1_ci_low": float(np.percentile(f1s, lo)),
+        "F1_ci_high": float(np.percentile(f1s, hi)),
+        "n_tiles": tile_cms.shape[0],
+        "n_classes": int(k_mask.sum()),
+        "redraw_rate": redraw,
+    }
