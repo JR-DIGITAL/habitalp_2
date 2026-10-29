@@ -161,4 +161,4 @@ wandb_project:
   value: "semantic-segmentation-terratorch-extended"
 wandb_key:
   desc: W&B API key
-  value: ***REMOVED***
+  value: null

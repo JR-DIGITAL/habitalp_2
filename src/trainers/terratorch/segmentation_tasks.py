@@ -1,18 +1,66 @@
+import copy
 from typing import Any
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 import kornia.augmentation as K
 import matplotlib.pyplot as plt
 from terratorch.tasks import SemanticSegmentationTask
+from terratorch.tasks.optimizer_factory import optimizer_factory
 from terratorch.tasks.segmentation_tasks import to_segmentation_prediction
 from torchgeo.datasets.utils import unbind_samples
 from torchmetrics.classification import MulticlassF1Score, MulticlassConfusionMatrix
 import wandb
+
+
+class SymmetricCrossEntropy(nn.Module):
+    """Symmetric Cross-Entropy loss (Wang et al., ICCV 2019).
+
+    L_SCE = alpha * CE(p, y) + beta * RCE(y, p)
+    where RCE treats one-hot targets as a distribution: -sum(y * log(p)).
+    """
+
+    def __init__(self, alpha=1.0, beta=0.1, num_classes=None, ignore_index=255):
+        super().__init__()
+        self.alpha = alpha
+        self.beta = beta
+        self.num_classes = num_classes
+        self.ignore_index = ignore_index
+
+    def forward(self, logits, targets):
+        # Standard forward CE (ignores ignore_index pixels)
+        ce = F.cross_entropy(logits, targets, ignore_index=self.ignore_index)
+        # Reverse CE: -sum(y_onehot * log(p)), mask out ignored pixels
+        prob = F.softmax(logits, dim=1).clamp(min=1e-7)
+        mask = (targets != self.ignore_index)
+        t_clamped = targets.clone()
+        t_clamped[~mask] = 0  # keep in-range for one_hot; masked out below
+        one_hot = F.one_hot(t_clamped, self.num_classes).permute(0, 3, 1, 2).float()
+        rce = -(one_hot * torch.log(prob) * mask.unsqueeze(1)).sum(dim=1).mean()
+        return self.alpha * ce + self.beta * rce
 
 BATCH_IDX_FOR_VALIDATION_PLOTTING = 10
 
 
 class ExtendedSemanticSegmentationTask(SemanticSegmentationTask):
     def __init__(self, *args, **kwargs):
+        # Intercept SCE loss: pass "ce" to super so TerraTorch doesn't reject
+        # the unknown string, then swap self.criterion after init.
+        _use_sce = kwargs.get("loss") == "sce"
+        _sce_alpha = kwargs.pop("sce_alpha", 1.0)
+        _sce_beta = kwargs.pop("sce_beta", 0.1)
+        if _use_sce:
+            kwargs["loss"] = "ce"
+
         super().__init__(*args, **kwargs)
+
+        if _use_sce:
+            self.criterion = SymmetricCrossEntropy(
+                alpha=_sce_alpha,
+                beta=_sce_beta,
+                num_classes=self.hparams["model_args"]["num_classes"],
+                ignore_index=self.hparams["ignore_index"],
+            )
 
         self.test_metrics[0].add_metrics(
             {
@@ -27,6 +75,47 @@ class ExtendedSemanticSegmentationTask(SemanticSegmentationTask):
                     normalize="true",
                 ),
             }
+        )
+
+    def _remap_nodata(self, y):
+        """Remap nodata pixels (value 0) to ignore_index when ignore_index=255.
+
+        Needed for buffer-masked label rasters: the original nodata=0 convention
+        is still present, but the loss is configured to ignore_index=255. Remapping
+        ensures both nodata and eroded boundary pixels are excluded from loss and metrics.
+        """
+        if self.hparams["ignore_index"] == 255:
+            y = y.clone()
+            y[y == 0] = 255
+        return y
+
+    def training_step(self, batch: Any, batch_idx: int, dataloader_idx: int = 0):
+        x = batch["image"]
+        y = self._remap_nodata(self.squeeze_ground_truth(batch["mask"]))
+        other_keys = batch.keys() - {"image", "mask", "filename"}
+        rest = {k: batch[k] for k in other_keys}
+        model_output = self(x, **rest)
+        loss = self.train_loss_handler.compute_loss(model_output, y, self.criterion, self.aux_loss)
+        self.train_loss_handler.log_loss(self.log, loss_dict=loss, batch_size=y.shape[0])
+        y_hat_hard = to_segmentation_prediction(model_output)
+        self.train_metrics.update(y_hat_hard, y)
+        return loss["loss"]
+
+    def configure_optimizers(self):
+        # Deep-copy scheduler_hparams before passing to optimizer_factory.
+        # optimizer_factory mutates the dict in-place (replaces the "linear_warmup"
+        # string with a local lambda), which would make self.hparams unpicklable
+        # and crash Lightning checkpoint saving.
+        scheduler_hparams = copy.deepcopy(self.hparams.get("scheduler_hparams", None))
+        parameters = self.parameters()
+        return optimizer_factory(
+            self.hparams["optimizer"] or "Adam",
+            self.hparams["lr"],
+            parameters,
+            self.hparams["optimizer_hparams"],
+            self.hparams["scheduler"],
+            self.monitor,
+            scheduler_hparams,
         )
 
     def forward(self, *args, **kwargs):
@@ -102,7 +191,7 @@ class ExtendedSemanticSegmentationTask(SemanticSegmentationTask):
             dataloader_idx: Index of the current dataloader.
         """
         x = batch["image"]
-        y = self.squeeze_ground_truth(batch["mask"])
+        y = self._remap_nodata(self.squeeze_ground_truth(batch["mask"]))
 
         other_keys = batch.keys() - {"image", "mask", "filename"}
         rest = {k: batch[k] for k in other_keys}

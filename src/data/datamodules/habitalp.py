@@ -40,6 +40,9 @@ class HabitAlp2DataModule(GeoDataModule):
         image_paths_pred: dict[Path] | None = None,
         prediction_mask_path: str | None = None,
         ndsm_aug_config: dict | None = None,
+        exclusion_shape_path: str | None = None,
+        exclusion_buffer: float = 0.0,
+        exclusion_mode: str = "mask",
     ):
         """Initialize the data module.
 
@@ -58,6 +61,13 @@ class HabitAlp2DataModule(GeoDataModule):
             image_paths_pred (dict, optional): Paths to input images for prediction. Defaults to None.
             prediction_mask_path (str, optional): Path to the label mask image of the prediction dataset. Defaults to None.
             ndsm_aug_config (dict, optional): Configuration for nDSM-specific augmentations. Defaults to None.
+            exclusion_shape_path (str, optional): Path to polygons (e.g. the 2020 test patches) that training
+                and validation samples must not touch. Only the train/val samplers see the exclusion, so the
+                grid split and the test set stay unchanged. Defaults to None.
+            exclusion_buffer (float, optional): Buffer around the exclusion polygons in CRS units, used with
+                exclusion_mode "mask". Defaults to 0.0.
+            exclusion_mode (str, optional): "mask" removes the buffered polygons from the sampling area;
+                "drop_cells" removes every train/val grid cell that intersects them. Defaults to "mask".
         """
         super().__init__(
             dataset_class=RasterDataset,
@@ -78,6 +88,11 @@ class HabitAlp2DataModule(GeoDataModule):
         self.class_names = class_names
         self.image_paths_pred = image_paths_pred
         self.prediction_mask_path = prediction_mask_path
+        if exclusion_mode not in ("mask", "drop_cells"):
+            raise ValueError(f"exclusion_mode must be 'mask' or 'drop_cells', got {exclusion_mode!r}")
+        self.exclusion_shape_path = exclusion_shape_path
+        self.exclusion_buffer = exclusion_buffer
+        self.exclusion_mode = exclusion_mode
 
         # Data loaders
         self.predict_batch_size = 1  # For inference, we use batch size of 1
@@ -290,6 +305,36 @@ class HabitAlp2DataModule(GeoDataModule):
 
         return batch
 
+    def _exclude_from_roi(self, roi):
+        """Remove the exclusion area from the ROI used by the train/val samplers.
+
+        The samplers only yield patches that lie entirely inside this ROI, so no training or
+        validation patch contains imagery or labels from the excluded area.
+        """
+        if self.exclusion_shape_path is None:
+            return roi
+        if roi is None:
+            raise ValueError("An exclusion area needs a ROI (roi_shape_path).")
+        excluded = gpd.read_file(self.exclusion_shape_path).geometry.union_all()
+        if self.exclusion_mode == "mask":
+            excluded = excluded.buffer(self.exclusion_buffer)
+        else:  # drop_cells
+            cells = [
+                geom
+                for ds in (self.train_dataset, self.val_dataset)
+                for geom in ds.index.geometry
+                if geom.intersects(excluded)
+            ]
+            print(f"Dropping {len(cells)} train/val grid cells that intersect the exclusion area.")
+            # 1 m buffer closes slivers between the dropped cells and the ROI boundary
+            excluded = gpd.GeoSeries(cells).union_all().buffer(1.0)
+        sampler_roi = roi.difference(excluded)
+        print(
+            f"Exclusion ({self.exclusion_mode}, buffer {self.exclusion_buffer}): "
+            f"sampling area {sampler_roi.area / 1e6:.1f} of {roi.area / 1e6:.1f} km2."
+        )
+        return sampler_roi
+
     def setup(
         self,
         stage: str = "fit",
@@ -382,19 +427,20 @@ class HabitAlp2DataModule(GeoDataModule):
             print(
                 f"Assigned {self.train_dataset.__len__()}/{self.val_dataset.__len__()}/{self.test_dataset.__len__()} cells to train/val/test datasets."
             )
+            self.sampler_roi = self._exclude_from_roi(self.roi)
         if stage in ["fit"]:
             self.train_sampler = RandomGeoSamplerWithinRoi(
                 self.train_dataset,
                 size=self.patch_size,
                 length=self.length,
-                roi=self.roi,
+                roi=self.sampler_roi,
             )
         if stage in ["fit", "validate"]:
             self.val_sampler = RandomGeoSamplerWithinRoi(
                 self.val_dataset,
                 size=self.patch_size,
                 length=self.val_batches_per_epoch * self.batch_size,
-                roi=self.roi,
+                roi=self.sampler_roi,
             )
         if stage in ["test"]:
             self.test_sampler = GridGeoSampler(

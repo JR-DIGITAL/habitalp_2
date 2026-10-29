@@ -5,11 +5,13 @@ BASE_FOLDER = Path(__file__).resolve().parents[2]
 sys.path.append(str(BASE_FOLDER))
 
 import argparse
+import os
 import warnings
 import gc
 import torch
 import wandb
 from lightning.fabric import Fabric
+from lightning.pytorch import seed_everything
 
 from src.data.datamodules.habitalp import HabitAlp2DataModule
 from src.trainers.terratorch.segmentation_tasks import ExtendedSemanticSegmentationTask
@@ -29,6 +31,19 @@ def main():
         help="Path to YAML config file with data paths and parameters",
     )
 
+    parser.add_argument(
+        "--resume",
+        type=str,
+        required=False,
+        help="Checkpoint to resume an interrupted run from (models/<run>/latest.ckpt; last.ckpt is the best epoch)",
+    )
+    parser.add_argument(
+        "--wandb-run-id",
+        type=str,
+        required=False,
+        help="W&B run to continue when resuming, so the curves stay in one run",
+    )
+
     args = parser.parse_args()
 
     if args.config:
@@ -42,7 +57,8 @@ def main():
         if config_path.exists():
             print("Loading configuration file ...")
             config = load_config_from_yaml(config_path)
-            data_folder = Path(config["data_folder"])
+            # HABITALP_DATA_ROOT overrides the machine-specific path in the config
+            data_folder = Path(os.environ.get("HABITALP_DATA_ROOT", config["data_folder"]))
             hyperparameters = config["hyperparameters"]
 
             experiment_name = config["name"]
@@ -55,10 +71,16 @@ def main():
             gpu_id = config["gpu_id"]
             input_bands = hyperparameters["input_bands"]
             class_names = config["class_names"]
-            wandb_key = config["wandb_key"]
+            wandb_key = os.environ.get("WANDB_API_KEY", config.get("wandb_key"))
             model_factory = config.get("model_factory", "ClayModelFactory")
             model_args_config = config.get("model_args", {})
             freeze_backbone = config.get("freeze_backbone", False)
+            scheduler = config.get("scheduler", None)
+            scheduler_hparams = config.get("scheduler_hparams", None)
+            # training seed (model init, sampling, augmentation); the grid split keeps its own fixed seed
+            seed = config.get("seed", None)
+            # area kept out of training/validation, e.g. the 2020 test patches
+            exclusion = config.get("exclusion", None) or {}
 
             # Check for multi-year training config
             if "training_years" in config:
@@ -184,6 +206,13 @@ def main():
         model_factory = "ClayModelFactory"
         model_args_config = {}
         freeze_backbone = False
+        scheduler = None
+        scheduler_hparams = None
+        seed = None
+        exclusion = {}
+
+    if seed is not None:
+        seed_everything(seed, workers=True)
 
     experiment_dir_base = BASE_FOLDER / "models"
     fabric = Fabric(precision=precision)
@@ -211,6 +240,9 @@ def main():
         val_batches_per_epoch=hyperparameters["val_batches_per_epoch"],
         class_names=class_names,
         ndsm_aug_config=config.get("ndsm_augmentation", {}).get("value", None) if args.config else None,
+        exclusion_shape_path=data_folder / exclusion["shape_path"] if exclusion else None,
+        exclusion_buffer=exclusion.get("buffer", 0.0),
+        exclusion_mode=exclusion.get("mode", "mask"),
     )
 
     datamodule.setup(stage="fit")
@@ -258,10 +290,13 @@ def main():
         ignore_index=ignore_index,
         optimizer=hyperparameters.get("optimizer", "AdamW"),
         optimizer_hparams=hyperparameters.get("optimizer_hparams", {"weight_decay": 0.0001}),
+        scheduler=scheduler,
+        scheduler_hparams=scheduler_hparams,
         freeze_backbone=freeze_backbone,
         plot_on_val=False,
         class_names=datamodule.class_names,
         class_weights=class_weights,
+        **{k: hyperparameters[k] for k in ["sce_alpha", "sce_beta"] if k in hyperparameters},
     )
 
     # Set Internal precision of float32 matrix multiplications
@@ -286,10 +321,20 @@ def main():
         wandb_key=wandb_key,
         monitor_metric=hyperparameters["monitor_metric"],
         log_model=False,
+        wandb_tags=config.get("wandb_tags") if args.config else None,
+        wandb_group=config.get("wandb_group") if args.config else None,
+        early_stopping=config.get("early_stopping", True) if args.config else True,
+        wandb_run_id=args.wandb_run_id,
+        wandb_config={
+            "seed": seed,
+            "exclusion": exclusion,
+            "hyperparameters": hyperparameters,
+            "config_file": str(args.config),
+        },
     )
 
     # Start training
-    trainer.fit(model=task, datamodule=datamodule)
+    trainer.fit(model=task, datamodule=datamodule, ckpt_path=args.resume)
 
     # Evaluate using test set and log final metrics
     trainer.test(model=task, datamodule=datamodule)

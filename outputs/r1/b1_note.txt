@@ -1,0 +1,80 @@
+B1: paired spatial block bootstrap of macro IoU differences (R1-M1)
+Script: scripts/b1_paired_bootstrap.py; input outputs/r1/b9_tile_cms.npz (best checkpoints); output b1_paired.csv
+Resamples: 10000 of the 88 tiles (500 m blocks), seed 0; one tile index set per resample for all rasters and metrics.
+Fixed class set with redraw (block_bootstrap_ci_fixed rule): classes seg 23, CD multi 9, CD binary 2; 10002 draws for 10000 accepted, redraw rate 0.0002. Per-tile reference support identical across rasters: True (minimum used).
+Per resample: macro IoU per seed raster, mean over the model's seeds, difference of the means (a - b); seeds resampled with replacement per model (hierarchical). CI: 95% percentile, unadjusted; no p-values, no multiplicity correction.
+Sanity: observed seed means equal b9_summary.csv (max |diff| 8.3e-17).
+
+Per-seed macro IoU (seeds 0;1;2), best checkpoint:
+  Clay v1.0: 2020 segmentation 0.2494 (0.2518;0.2498;0.2466); CD multi-class 0.2330 (0.2350;0.2346;0.2295); CD binary 0.4249 (0.4306;0.4270;0.4171)
+  Clay v1.5: 2020 segmentation 0.2096 (0.2037;0.2162;0.2088); CD multi-class 0.2085 (0.2079;0.2134;0.2043); CD binary 0.3856 (0.3872;0.3961;0.3734)
+  Prithvi-EO-2.0: 2020 segmentation 0.2159 (0.2298;0.2053;0.2127); CD multi-class 0.2045 (0.2073;0.1948;0.2114); CD binary 0.3944 (0.4078;0.3862;0.3892)
+  DOFA: 2020 segmentation 0.2011 (0.1972;0.2054;0.2007); CD multi-class 0.2096 (0.2136;0.2205;0.1948); CD binary 0.3949 (0.3876;0.4044;0.3926)
+  TerraMind: 2020 segmentation 0.2078 (0.2101;0.2088;0.2046); CD multi-class 0.2036 (0.2028;0.2090;0.1989); CD binary 0.3885 (0.3956;0.3810;0.3888)
+  ResNet-50 U-Net: 2020 segmentation 0.1572 (0.1414;0.1617;0.1687); CD multi-class 0.1640 (0.1478;0.1733;0.1710); CD binary 0.3440 (0.3247;0.3551;0.3523)
+  MiT-B2 U-Net: 2020 segmentation 0.2262 (0.2140;0.2222;0.2425); CD multi-class 0.2094 (0.1935;0.2061;0.2287); CD binary 0.3888 (0.3717;0.3841;0.4105)
+  Clay v1.0, U-Net decoder: 2020 segmentation 0.2238 (0.2238); CD multi-class 0.2271 (0.2271); CD binary 0.4083 (0.4083)
+  Prithvi-EO-2.0, U-Net decoder: 2020 segmentation 0.2016 (0.2016); CD multi-class 0.2206 (0.2206); CD binary 0.3961 (0.3961)
+  MiT-B2 U-Net, original split: 2020 segmentation 0.2275 (0.2283;0.2254;0.2290); CD multi-class 0.1832 (0.1796;0.1736;0.1965); CD binary 0.3848 (0.3896;0.3734;0.3916)
+  MiT-B2 U-Net, block-drop split: 2020 segmentation 0.2146 (0.2193;0.2163;0.2081); CD multi-class 0.2035 (0.2145;0.2045;0.1914); CD binary 0.3778 (0.3826;0.3792;0.3717)
+
+Planned comparisons:
+  comparison | metric | diff | 95% CI tiles+seeds | excl. 0 | 95% CI tiles only
+  Clay v1.0 - MiT-B2 U-Net | 2020 segmentation | +0.0231 | [+0.0061, +0.0397] | yes | [+0.0141, +0.0319]
+  Clay v1.0 - MiT-B2 U-Net | CD multi-class | +0.0236 | [+0.0012, +0.0452] | yes | [+0.0089, +0.0369]
+  Clay v1.0 - MiT-B2 U-Net | CD binary | +0.0362 | [+0.0131, +0.0592] | yes | [+0.0248, +0.0476]
+  Clay v1.5 - MiT-B2 U-Net | 2020 segmentation | -0.0167 | [-0.0347, +0.0010] | no | [-0.0262, -0.0068]
+  Clay v1.5 - MiT-B2 U-Net | CD multi-class | -0.0009 | [-0.0211, +0.0196] | no | [-0.0119, +0.0100]
+  Clay v1.5 - MiT-B2 U-Net | CD binary | -0.0032 | [-0.0287, +0.0212] | no | [-0.0166, +0.0097]
+  Prithvi-EO-2.0 - MiT-B2 U-Net | 2020 segmentation | -0.0103 | [-0.0314, +0.0100] | no | [-0.0208, -0.0005]
+  Prithvi-EO-2.0 - MiT-B2 U-Net | CD multi-class | -0.0049 | [-0.0275, +0.0177] | no | [-0.0178, +0.0091]
+  Prithvi-EO-2.0 - MiT-B2 U-Net | CD binary | +0.0056 | [-0.0193, +0.0297] | no | [-0.0061, +0.0170]
+  DOFA - MiT-B2 U-Net | 2020 segmentation | -0.0251 | [-0.0435, -0.0072] | yes | [-0.0360, -0.0142]
+  DOFA - MiT-B2 U-Net | CD multi-class | +0.0002 | [-0.0276, +0.0276] | no | [-0.0177, +0.0187]
+  DOFA - MiT-B2 U-Net | CD binary | +0.0061 | [-0.0188, +0.0302] | no | [-0.0084, +0.0190]
+  TerraMind - MiT-B2 U-Net | 2020 segmentation | -0.0184 | [-0.0374, -0.0004] | yes | [-0.0297, -0.0069]
+  TerraMind - MiT-B2 U-Net | CD multi-class | -0.0059 | [-0.0288, +0.0179] | no | [-0.0195, +0.0110]
+  TerraMind - MiT-B2 U-Net | CD binary | -0.0003 | [-0.0264, +0.0231] | no | [-0.0155, +0.0144]
+  ResNet-50 U-Net - MiT-B2 U-Net | 2020 segmentation | -0.0690 | [-0.0925, -0.0456] | yes | [-0.0816, -0.0541]
+  ResNet-50 U-Net - MiT-B2 U-Net | CD multi-class | -0.0454 | [-0.0711, -0.0213] | yes | [-0.0581, -0.0313]
+  ResNet-50 U-Net - MiT-B2 U-Net | CD binary | -0.0447 | [-0.0760, -0.0162] | yes | [-0.0628, -0.0283]
+  Clay v1.0 - Prithvi-EO-2.0 (post hoc) | 2020 segmentation | +0.0335 | [+0.0180, +0.0481] | yes | [+0.0252, +0.0421]
+  Clay v1.0 - Prithvi-EO-2.0 (post hoc) | CD multi-class | +0.0285 | [+0.0112, +0.0453] | yes | [+0.0143, +0.0410]
+  Clay v1.0 - Prithvi-EO-2.0 (post hoc) | CD binary | +0.0305 | [+0.0112, +0.0490] | yes | [+0.0180, +0.0435]
+
+Against the ResNet-50 U-Net (post hoc):
+  comparison | metric | diff | 95% CI tiles+seeds | excl. 0 | 95% CI tiles only
+  Clay v1.0 - ResNet-50 U-Net (post hoc) | 2020 segmentation | +0.0921 | [+0.0717, +0.1116] | yes | [+0.0765, +0.1059]
+  Clay v1.0 - ResNet-50 U-Net (post hoc) | CD multi-class | +0.0690 | [+0.0488, +0.0904] | yes | [+0.0529, +0.0823]
+  Clay v1.0 - ResNet-50 U-Net (post hoc) | CD binary | +0.0809 | [+0.0561, +0.1083] | yes | [+0.0628, +0.1002]
+  Clay v1.5 - ResNet-50 U-Net (post hoc) | 2020 segmentation | +0.0523 | [+0.0336, +0.0704] | yes | [+0.0398, +0.0627]
+  Clay v1.5 - ResNet-50 U-Net (post hoc) | CD multi-class | +0.0445 | [+0.0261, +0.0647] | yes | [+0.0313, +0.0566]
+  Clay v1.5 - ResNet-50 U-Net (post hoc) | CD binary | +0.0415 | [+0.0166, +0.0664] | yes | [+0.0267, +0.0565]
+  Prithvi-EO-2.0 - ResNet-50 U-Net (post hoc) | 2020 segmentation | +0.0587 | [+0.0366, +0.0788] | yes | [+0.0463, +0.0683]
+  Prithvi-EO-2.0 - ResNet-50 U-Net (post hoc) | CD multi-class | +0.0405 | [+0.0197, +0.0619] | yes | [+0.0271, +0.0539]
+  Prithvi-EO-2.0 - ResNet-50 U-Net (post hoc) | CD binary | +0.0504 | [+0.0271, +0.0750] | yes | [+0.0370, +0.0640]
+  DOFA - ResNet-50 U-Net (post hoc) | 2020 segmentation | +0.0438 | [+0.0249, +0.0617] | yes | [+0.0307, +0.0552]
+  DOFA - ResNet-50 U-Net (post hoc) | CD multi-class | +0.0456 | [+0.0225, +0.0690] | yes | [+0.0307, +0.0594]
+  DOFA - ResNet-50 U-Net (post hoc) | CD binary | +0.0508 | [+0.0302, +0.0730] | yes | [+0.0391, +0.0625]
+  TerraMind - ResNet-50 U-Net (post hoc) | 2020 segmentation | +0.0506 | [+0.0339, +0.0663] | yes | [+0.0409, +0.0585]
+  TerraMind - ResNet-50 U-Net (post hoc) | CD multi-class | +0.0395 | [+0.0199, +0.0612] | yes | [+0.0256, +0.0559]
+  TerraMind - ResNet-50 U-Net (post hoc) | CD binary | +0.0444 | [+0.0210, +0.0684] | yes | [+0.0292, +0.0594]
+
+Supporting:
+  comparison | metric | diff | 95% CI tiles+seeds | excl. 0 | 95% CI tiles only
+  Clay v1.0, U-Net decoder - Prithvi-EO-2.0, U-Net decoder | 2020 segmentation | +0.0222 | [+0.0085, +0.0352] | yes | [+0.0085, +0.0352]
+  Clay v1.0, U-Net decoder - Prithvi-EO-2.0, U-Net decoder | CD multi-class | +0.0065 | [-0.0085, +0.0235] | no | [-0.0085, +0.0235]
+  Clay v1.0, U-Net decoder - Prithvi-EO-2.0, U-Net decoder | CD binary | +0.0123 | [-0.0067, +0.0310] | no | [-0.0067, +0.0310]
+  MiT-B2 U-Net - MiT-B2 U-Net, original split | 2020 segmentation | -0.0013 | [-0.0173, +0.0156] | no | [-0.0098, +0.0060]
+  MiT-B2 U-Net - MiT-B2 U-Net, original split | CD multi-class | +0.0262 | [+0.0013, +0.0508] | yes | [+0.0123, +0.0402]
+  MiT-B2 U-Net - MiT-B2 U-Net, original split | CD binary | +0.0039 | [-0.0192, +0.0290] | no | [-0.0076, +0.0151]
+  MiT-B2 U-Net - MiT-B2 U-Net, block-drop split | 2020 segmentation | +0.0116 | [-0.0042, +0.0283] | no | [+0.0054, +0.0175]
+  MiT-B2 U-Net - MiT-B2 U-Net, block-drop split | CD multi-class | +0.0060 | [-0.0158, +0.0298] | no | [-0.0034, +0.0180]
+  MiT-B2 U-Net - MiT-B2 U-Net, block-drop split | CD binary | +0.0109 | [-0.0096, +0.0335] | no | [+0.0017, +0.0204]
+  MiT-B2 U-Net, original split - MiT-B2 U-Net, block-drop split | 2020 segmentation | +0.0130 | [+0.0010, +0.0251] | yes | [+0.0035, +0.0227]
+  MiT-B2 U-Net, original split - MiT-B2 U-Net, block-drop split | CD multi-class | -0.0202 | [-0.0403, +0.0016] | no | [-0.0321, -0.0060]
+  MiT-B2 U-Net, original split - MiT-B2 U-Net, block-drop split | CD binary | +0.0070 | [-0.0103, +0.0240] | no | [-0.0052, +0.0189]
+
+Note: one-seed comparisons (U-Net decoder pair) have no seed resampling; their CI covers
+tiles only. With three seeds the training-randomness part of the CI is approximate
+(GEO-Bench recommends at least 10 seeds).
